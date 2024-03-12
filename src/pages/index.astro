@@ -1,23 +1,77 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import SectionContainer from '../components/SectionContainer.astro';
-import Principal from '../components/Principal.astro';
+import Layout from "../layouts/Layout.astro";
+import IconoCalendario from "../components/icons/IconoCalendario.astro";
+import Principal from "../components/Principal.astro";
 ---
 
-<Layout title="Movilizate" description='Movilizate mas que una web, consigue el físico que tanto quieres,planes de entrenamiento y nutrición personalizados'>
+<Layout
+	title="Movilizate"
+	description="Movilizate mas que una web, consigue el físico que tanto quieres,planes de entrenamiento y nutrición personalizados"
+>
 	<main>
-		<div class="relative h-screen flex  items-center">
-			<picture class="absolute top-0 left-0 w-full h-full overflow-hidden">
-			  <!-- Definir múltiples fuentes de imagen para diferentes tamaños de pantalla -->
-			  <source srcset="/fotoPrincipal.webp" media="(min-width: 1024px)">
-			  <source srcset="/fotoPrincipal.webp" media="(min-width: 768px)">
-			  <img src="/fotoPrincipal.webp" alt="Tu imagen de fondo" class="object-fill object-center h-full w-full">
+		<div class="relative h-screen flex items-center">
+			<picture
+				class="absolute top-0 left-0 w-full h-full overflow-hidden"
+			>
+				<!-- Definir múltiples fuentes de imagen para diferentes tamaños de pantalla -->
+				<source
+					srcset="/fotoPrincipal.webp"
+					media="(min-width: 1024px)"
+				/>
+				<source
+					srcset="/fotoPrincipal.webp"
+					media="(min-width: 768px)"
+				/>
+				<img
+					src="/fotoPrincipal.webp"
+					alt="Tu imagen de fondo"
+					class="object-fill object-center h-full w-full"
+				/>
 			</picture>
 			<div class="text-white text-center z-10 relative ml-[15%]">
-			  <h1 class="text-4xl md:text-6xl lg:text-8xl font-bold mb-4"><p class="text-green-500">CONSIGUE EL</p> <p>FISICO QUE </p>TANTO QUIERES</h1>
-			  <p class="text-lg md:text-xl lg:text-2xl">Planes de entrenamiento y nutrición personalizados para tu objetivo</p>
+				<h1 class="text-4xl md:text-6xl lg:text-8xl font-bold mb-4">
+					<p class="text-green-500">CONSIGUE EL</p>
+					<p>FISICO QUE</p>TANTO QUIERES
+				</h1>
+				<p class="text-lg md:text-xl lg:text-2xl">
+					Planes de entrenamiento y nutrición personalizados para tu
+					objetivo
+				</p>
 			</div>
-		  </div>
-		  <Principal/>
+		</div>
+		<div class="grid grid-cols-1 gap-4 lg:grid-cols-3 lg:gap-8 info mx-auto px-4 sm:px-6 lg:px-60 ">
+			<div class="h-[400px] w-full rounded-lg flex flex-col justify-center items-center">
+				<IconoCalendario class="size-32" />
+				<h2 class="text-3xl font-bold">Planes de entrenamiento</h2>
+				<p class="text-lg">
+					Planes de entrenamiento y nutrición personalizados para tu
+					objetivo
+				</p>
+			</div>
+			<div class="h-[400px] w-full rounded-lg flex flex-col justify-center items-center">
+				<IconoCalendario class="size-32" />
+				<h2 class="text-3xl font-bold">Planes de entrenamiento</h2>
+				<p class="text-lg">
+					Planes de entrenamiento y nutrición personalizados para tu
+					objetivo
+				</p>
+			</div>
+			<div class="h-[400px] w-full rounded-lg flex flex-col justify-center items-center">
+				<IconoCalendario class="size-32" />
+				<h2 class="text-3xl font-bold">Planes de entrenamiento</h2>
+				<p class="text-lg">
+					Planes de entrenamiento y nutrición personalizados para tu
+					objetivo
+				</p>
+			</div>
+		</div>
+		<Principal />
 	</main>
 </Layout>
+
+<style>
+	.info {
+		color: white;
+		background-color: rgb(41, 41, 173);
+	}
+</style>
