@@ -1,7 +1,10 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import IconoCalendario from "../components/icons/IconoCalendario.astro";
+import IconoConfiguracion from "../components/icons/IconoConfiguracion.astro";
+import IconoSombrero from "../components/icons/IconoSombrero.astro";
 import Principal from "../components/Principal.astro";
+import Testimonios from "../components/Testimonios.astro";
 ---
 
 <Layout
@@ -9,11 +12,10 @@ import Principal from "../components/Principal.astro";
 	description="Movilizate mas que una web, consigue el físico que tanto quieres,planes de entrenamiento y nutrición personalizados"
 >
 	<main>
-		<div class="relative h-screen flex items-center">
+		<div class="relative h-screen flex items-center" style="height: calc(100vh - 7rem);">
 			<picture
-				class="absolute top-0 left-0 w-full h-full overflow-hidden"
+				class="absolute top-0 left-0 w-full h-full overflow-hidden lg:w-full "
 			>
-				<!-- Definir múltiples fuentes de imagen para diferentes tamaños de pantalla -->
 				<source
 					srcset="/fotoPrincipal.webp"
 					media="(min-width: 1024px)"
@@ -22,13 +24,17 @@ import Principal from "../components/Principal.astro";
 					srcset="/fotoPrincipal.webp"
 					media="(min-width: 768px)"
 				/>
+				<source
+				srcset="/fotoPrincipal-850px.webp"
+				media="(min-width: 300px)"
+			/>
 				<img
 					src="/fotoPrincipal.webp"
 					alt="Tu imagen de fondo"
 					class="object-fill object-center h-full w-full"
 				/>
 			</picture>
-			<div class="text-white text-center z-10 relative ml-[15%]">
+			<div class="text-white text-center z-10 relative ml-[15%] gap-3 flex flex-col items-center">
 				<h1 class="text-4xl md:text-6xl lg:text-8xl font-bold mb-4">
 					<p class="text-green-500">CONSIGUE EL</p>
 					<p>FISICO QUE</p>TANTO QUIERES
@@ -37,35 +43,40 @@ import Principal from "../components/Principal.astro";
 					Planes de entrenamiento y nutrición personalizados para tu
 					objetivo
 				</p>
+				<p class="text-lg md:text-xl lg:text-2xl">
+					Movilizate, eres tu salud
+				</p>
+				<a href="#" class="inline-flex justify-center w-52 hover:text-[#92D8F5] items-center py-3 px-5 sm:ms-4 text-lg font-medium text-center text-white rounded-lg border border-white hover:bg-gray-100 focus:ring-4 focus:ring-gray-400">
+					APÚNTATE YA!
+				</a> 
 			</div>
 		</div>
-		<div class="grid grid-cols-1 gap-4 lg:grid-cols-3 lg:gap-8 info mx-auto px-4 sm:px-6 lg:px-60 ">
+		<div class="grid grid-cols-1 gap-4 lg:grid-cols-3 xl:gap-32 info mx-auto px-4 sm:px-6 lg:px-40 justify-center items-center">
 			<div class="h-[400px] w-full rounded-lg flex flex-col justify-center items-center">
-				<IconoCalendario class="size-32" />
+				<IconoCalendario class="size-28 "/>
 				<h2 class="text-3xl font-bold">Planes de entrenamiento</h2>
 				<p class="text-lg">
-					Planes de entrenamiento y nutrición personalizados para tu
-					objetivo
+					Planes de entrenamiento y nutrición personalizados para tu objetivo
 				</p>
 			</div>
 			<div class="h-[400px] w-full rounded-lg flex flex-col justify-center items-center">
-				<IconoCalendario class="size-32" />
+				<IconoConfiguracion class="size-28" />
 				<h2 class="text-3xl font-bold">Planes de entrenamiento</h2>
 				<p class="text-lg">
-					Planes de entrenamiento y nutrición personalizados para tu
-					objetivo
+					Planes de entrenamiento y nutrición personalizados para tu objetivo
 				</p>
 			</div>
 			<div class="h-[400px] w-full rounded-lg flex flex-col justify-center items-center">
-				<IconoCalendario class="size-32" />
+				<IconoSombrero class="size-28" />
 				<h2 class="text-3xl font-bold">Planes de entrenamiento</h2>
 				<p class="text-lg">
-					Planes de entrenamiento y nutrición personalizados para tu
-					objetivo
+					Planes de entrenamiento y nutrición personalizados para tu objetivo
 				</p>
 			</div>
+		</div>
 		</div>
 		<Principal />
+		<Testimonios/>
 	</main>
 </Layout>
 
