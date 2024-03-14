@@ -1,9 +1,9 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import IconoCalendario from "../components/icons/IconoCalendario.astro";
-import IconoConfiguracion from "../components/icons/IconoConfiguracion.astro";
-import IconoSombrero from "../components/icons/IconoSombrero.astro";
-import Principal from "../components/Principal.astro";
+import IconoCasa from "../components/icons/IconoCasa.astro";
+import IconoMovil from "../components/icons/IconoMovil.astro";
+import IconoEntrenador from "../components/icons/IconoEntrenador.astro";
+import IconoMusculo from "../components/icons/IconoMusculo.astro";
 import Testimonios from "../components/Testimonios.astro";
 ---
 
@@ -51,31 +51,28 @@ import Testimonios from "../components/Testimonios.astro";
 				</a> 
 			</div>
 		</div>
-		<div class="grid grid-cols-1 gap-4 lg:grid-cols-3 xl:gap-32 info mx-auto px-4 sm:px-6 lg:px-40 justify-center items-center">
-			<div class="h-[400px] w-full rounded-lg flex flex-col justify-center items-center">
-				<IconoCalendario class="size-28 "/>
-				<h2 class="text-3xl font-bold">Planes de entrenamiento</h2>
-				<p class="text-lg">
-					Planes de entrenamiento y nutrición personalizados para tu objetivo
-				</p>
+		<div class="grid grid-cols-1 gap-4 lg:grid-cols-4 sm:gap-10 info mx-auto py-10 px-4 sm:px-6 lg:px-40 items-center">
+			<div class="h-full w-full rounded-lg flex flex-col items-center">
+				<div class="h-[150px] flex items-end"><IconoCasa class="size-28 "/></div>
+				<div class="h-[150px] mt-4"><h2 class="text-3xl font-bold">Entrena desde casa</h2></div>
 			</div>
-			<div class="h-[400px] w-full rounded-lg flex flex-col justify-center items-center">
-				<IconoConfiguracion class="size-28" />
-				<h2 class="text-3xl font-bold">Planes de entrenamiento</h2>
-				<p class="text-lg">
-					Planes de entrenamiento y nutrición personalizados para tu objetivo
-				</p>
+			<div class="h-full w-full rounded-lg flex flex-col items-center">
+				<div class="h-[150px] flex items-end"><IconoMovil class="size-28" /></div>
+				<div class="h-[150px] mt-4"><h2 class="text-3xl font-bold">Todo desde nuestra app</h2></div>
 			</div>
-			<div class="h-[400px] w-full rounded-lg flex flex-col justify-center items-center">
-				<IconoSombrero class="size-28" />
-				<h2 class="text-3xl font-bold">Planes de entrenamiento</h2>
-				<p class="text-lg">
-					Planes de entrenamiento y nutrición personalizados para tu objetivo
-				</p>
+			<div class="h-full w-full rounded-lg flex flex-col items-center">
+				<div class="h-[150px] flex items-end"><IconoEntrenador class="size-28" /></div>
+				<div class="h-[150px] mt-4"><h2 class="text-3xl font-bold">Coach 24H</h2></div>
+			</div>
+			<div class="h-full w-full rounded-lg flex flex-col items-center">
+				<div class="h-[150px] flex items-end"><IconoMusculo class="size-28" /></div>
+				<div class="h-[150px] mt-4 flex flex-col items-start 4xl:items-center">
+					<h2 class="text-3xl font-bold">Entrenamiento</h2>
+					<h2 class="text-3xl font-bold">y nutrición personalizado</h2>
+				</div>
 			</div>
 		</div>
 		</div>
-		<Principal />
 		<Testimonios/>
 	</main>
 </Layout>
