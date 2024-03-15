@@ -10,37 +10,36 @@
                     />
                 </div>
             </div>
-           <div class="flex items-center px-40">
-                <div class="hidden md:block">
-                    <div class="ml-10 flex items-baseline space-x-4">
-                        <a
-                            href="/"
-                            class="border-b-4 border-transparent hover:border-b-4 hover:border-blue-400 hover:text-blue-400 rounded-md px-3 py-2 text-xl font-medium {{ request()->is('/') ? 'bg-blue-400 text-white' : '' }}"
-                            aria-current="page">Inicio</a
-                        >
-                        <a
-                            href="/sobreNosotros"
-                            class="border-b-4 border-transparent hover:border-b-4 hover:border-blue-400 hover:text-blue-400 rounded-md px-3 py-2 text-xl font-medium {{ request()->is('sobreNosotros') ? 'bg-blue-400 text-white' : '' }}"
-                            >Sobre nosotros</a
-                        >
-                        <a
-                            href="/planes"
-                            class="border-b-4 border-transparent hover:border-b-4 hover:border-blue-400 hover:text-blue-400 rounded-md px-3 py-2 text-xl font-medium {{ request()->is('planes') ? 'bg-blue-400 text-white' : '' }}"
-                            >Planes</a
-                        >
-                        <a
-                            href="/contacto"
-                            class="border-b-4 border-transparent hover:border-b-4 hover:border-blue-400 hover:text-blue-400 rounded-md px-3 py-2 text-xl font-medium {{ request()->is('contacto') ? 'bg-blue-400 text-white' : '' }}"
-                            >Contacto</a
-                        >
-                    </div>
+            <div class="hidden md:flex items-center">
+                <div class="ml-10 flex items-baseline space-x-4">
+                    <a
+                        href="/"
+                        class="border-b-4 border-transparent hover:border-b-4 hover:border-[#91DAF6] hover:text-black rounded-md px-3 py-2 text-xl font-medium {{ request()->is('/') ? 'bg-blue-400 text-white' : '' }}"
+                        aria-current="page">Inicio</a
+                    >
+                    <a
+                        href="/sobreNosotros"
+                        class="border-b-4 border-transparent hover:border-b-4 hover:border-[#91DAF6] hover:text-black rounded-md px-3 py-2 text-xl font-medium {{ request()->is('sobreNosotros') ? 'bg-blue-400 text-white' : '' }}"
+                        >Sobre nosotros</a
+                    >
+                    <a
+                        href="/planes"
+                        class="border-b-4 border-transparent hover:border-b-4 hover:border-[#91DAF6] hover:text-black rounded-md px-3 py-2 text-xl font-medium {{ request()->is('planes') ? 'bg-blue-400 text-white' : '' }}"
+                        >Planes</a
+                    >
+                    <a
+                        href="/contacto"
+                        class="border-b-4 border-transparent hover:border-b-4 hover:border-[#91DAF6] hover:text-black rounded-md px-3 py-2 text-xl font-medium {{ request()->is('contacto') ? 'bg-blue-400 text-white' : '' }}"
+                        >Contacto</a
+                    >
                 </div>
             </div>
-            <div class="-mr-2 flex md:hidden">
+            <div class="md:hidden">
                 <!-- Mobile menu button -->
                 <button
+                    id="mobile-menu-button"
                     type="button"
-                    class="relative inline-flex items-center justify-center rounded-md bg-gray-800 p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
+                    class="relative inline-flex items-center justify-center rounded-md bg-gray-800 p-2 text-white hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
                     aria-controls="mobile-menu"
                     aria-expanded="false"
                 >
@@ -58,22 +57,7 @@
                         <path
                             stroke-linecap="round"
                             stroke-linejoin="round"
-                            d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
-                        ></path>
-                    </svg>
-                    <!-- Menu open: "block", Menu closed: "hidden" -->
-                    <svg
-                        class="hidden h-6 w-6"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke-width="1.5"
-                        stroke="currentColor"
-                        aria-hidden="true"
-                    >
-                        <path
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            d="M6 18L18 6M6 6l12 12"></path>
+                            d="M3 12h18M3 6h18M3 18h18"></path>
                     </svg>
                 </button>
             </div>
@@ -81,29 +65,97 @@
     </div>
 
     <!-- Mobile menu, show/hide based on menu state. -->
-    <div class="md:hidden" id="mobile-menu">
+    <div class="md:hidden" id="mobile-menu" style="display: none;">
         <div class="space-y-1 px-2 pb-3 pt-2 sm:px-3">
             <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
             <a
-                href="#"
-                class="bg-blue-400 text-white block rounded-md px-3 py-2 text-base font-medium"
+                href="/"
+                class="rounded-md px-3 py-2 text-base font-medium"
                 aria-current="page">Inicio</a
             >
             <a
-                href="#"
-                class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium"
+                href="/sobreNosotros"
+                class="rounded-md px-3 py-2 text-base font-medium"
                 >Sobre nosotros</a
             >
             <a
-                href="#"
-                class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium"
+                href="/planes"
+                class="rounded-md px-3 py-2 text-base font-medium"
                 >Planes</a
             >
             <a
-                href="#"
-                class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium"
+                href="/contacto"
+                class="rounded-md px-3 py-2 text-base font-medium"
                 >Contacto</a
             >
         </div>
     </div>
 </nav>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const mobileMenuButton: HTMLElement | null = document.getElementById('mobile-menu-button');
+        const mobileMenu: HTMLElement | null = document.getElementById('mobile-menu');
+        const currentPage = window.location.pathname; // Obtener la URL actual
+
+        if (mobileMenuButton && mobileMenu) {
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.style.display = mobileMenu.style.display === 'none' || mobileMenu.style.display === '' ? 'block' : 'none';
+            });
+
+            // Obtener todos los enlaces del menú móvil
+            const links = mobileMenu.querySelectorAll('a');
+
+            // Iterar sobre los enlaces y marcar la página actual
+            links.forEach(link => {
+                if (link.getAttribute('href') === currentPage) {
+                    link.classList.add('current');
+                }
+            });
+        } else {
+            console.error('No se encontraron los elementos del menú móvil');
+        }
+        
+        // Obtener todos los enlaces del menú principal
+        const links = document.querySelectorAll('nav a');
+
+        // Iterar sobre los enlaces y marcar la página actual
+        links.forEach(link => {
+            if (link.getAttribute('href') === currentPage) {
+                link.classList.add('current');
+            }
+        });
+    });
+</script>
+<style>
+    /* Estilo para el menú móvil */
+    #mobile-menu {
+        position: absolute; /* Posición absoluta para que se superponga al contenido */
+        top: 112px; /* Altura del nav */
+        left: 0;
+        width: 100%;
+        background-color: white;
+        display: none;
+        z-index: 999; /* Asegura que esté encima del contenido */
+        border-top: 1px solid #ccc; /* Línea divisoria opcional */
+    }
+
+    /* Estilo para los enlaces del menú móvil */
+    #mobile-menu a {
+        display: block;
+        padding: 10px;
+        color: #333;
+        text-decoration: none;
+    }
+    /* Estilo para el enlace activo */
+    #mobile-menu a.current {
+        background-color: #91DAF6; /* Color de fondo azul */
+        color: white; /* Color de texto blanco */
+    }
+    /* Estilo para el enlace activo en el menú principal */
+    nav a.current {
+        border-bottom-width: 4px;
+        border-color:#91DAF6;
+        color:black;
+    }
+</style>
