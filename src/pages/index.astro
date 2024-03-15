@@ -13,28 +13,25 @@ import Patrocinadores from "../components/Patrocinadores.astro";
 	description="Movilizate mas que una web, consigue el físico que tanto quieres,planes de entrenamiento y nutrición personalizados"
 >
 	<main>
-		<div class="relative h-screen flex items-center" style="height: calc(100vh - 7rem)">
+		<div class="relative flex items-center" style="height: calc(100vh - 7rem)">
 			<picture
 				class="absolute top-0 left-0 w-full h-full overflow-hidden lg:w-full "
-			>
+				>
 				<source
 					srcset="/fotoPrincipalInicio.webp"
 					media="(min-width: 1024px)"
 				/>
 				<source
-					srcset="/fotoPrincipalInicio.webp"
+					srcset="/fotoPrincipalIniciomax.jpg"
 					media="(min-width: 768px)"
 				/>
-				<source
-				srcset="/fotoPrincipalInicio.webp"
-				media="(min-width: 300px)"
-			/>
 				<img
-					src="/fotoPrincipalInicio.webp"
+					src="/fotoPrincipalIniciomovil2.jpg"
 					alt="Tu imagen de fondo"
 					class="object-fill object-center h-full w-full"
 				/>
 			</picture>
+			<div class="absolute max-md:inset-0 max-md:bg-black max-md:opacity-50"></div>
 			<div class="text-white text-center z-10 relative ml-[15%] gap-7 flex flex-col items-center">
 				<h1 class="text-4xl md:text-6xl lg:text-8xl font-bold mb-4">
 					<p class="text-green-500">CONSIGUE</p>
