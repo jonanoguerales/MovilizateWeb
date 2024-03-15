@@ -1,35 +1,38 @@
-<link href="https://cdn.jsdelivr.net/npm/keen-slider@6.8.6/keen-slider.min.css" rel="stylesheet" />
+<link
+  href="https://cdn.jsdelivr.net/npm/keen-slider@6.8.6/keen-slider.min.css"
+  rel="stylesheet"
+/>
 
 <script type="module">
-  import KeenSlider from 'https://cdn.jsdelivr.net/npm/keen-slider@6.8.6/+esm'
+  import KeenSlider from "https://cdn.jsdelivr.net/npm/keen-slider@6.8.6/+esm";
 
   const keenSlider = new KeenSlider(
-    '#keen-slider',
+    "#keen-slider",
     {
       loop: true,
       slides: {
-        origin: 'center',
-        perView: 1.25,
+        origin: "center",
+        perView: 1,
         spacing: 16,
       },
       breakpoints: {
-        '(min-width: 1400px)': {
+        "(min-width: 1400px)": {
           slides: {
-            origin: 'auto',
+            origin: "auto",
             perView: 4,
             spacing: 16,
           },
         },
       },
     },
-    []
-  )
+    [],
+  );
 
-  const keenSliderPrevious = document.getElementById('keen-slider-previous')
-  const keenSliderNext = document.getElementById('keen-slider-next')
+  const keenSliderPrevious = document.getElementById("keen-slider-previous");
+  const keenSliderNext = document.getElementById("keen-slider-next");
 
-  keenSliderPrevious.addEventListener('click', () => keenSlider.prev())
-  keenSliderNext.addEventListener('click', () => keenSlider.next())
+  keenSliderPrevious.addEventListener("click", () => keenSlider.prev());
+  keenSliderNext.addEventListener("click", () => keenSlider.next());
 </script>
 
 <section class="bg-white overflow-hidden">
@@ -42,7 +45,11 @@
 
     <div class="mx-6 my-8 lg:col-span-3 lg:mx-0">
       <div id="keen-slider" class="keen-slider">
-        <a href="/planes" class="keen-slider__slide" style="grid-template-columns: repeat(auto-fit, minmax(min-content, 1fr)); padding:2rem">
+        <a
+          href="/planes"
+          class="keen-slider__slide"
+          style="grid-template-columns: repeat(auto-fit, minmax(min-content, 1fr)); padding:2rem"
+        >
           <blockquote class="rounded bg-gray-50 p-6 shadow-lg sm:p-8">
             <div class="flex items-center gap-4">
               <img
@@ -50,7 +57,7 @@
                 src="/imgTestimonios/T1.webp"
                 class="size-16 rounded-xl object-contain bg-black"
               />
-    
+
               <div>
                 <div class="flex gap-0.5 text-green-500">
                   <svg
@@ -61,7 +68,7 @@
                   >
                     <path
                       d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
-                    />
+                    ></path>
                   </svg>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -71,7 +78,7 @@
                   >
                     <path
                       d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
-                    />
+                    ></path>
                   </svg>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -81,7 +88,7 @@
                   >
                     <path
                       d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
-                    />
+                    ></path>
                   </svg>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -91,7 +98,7 @@
                   >
                     <path
                       d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
-                    />
+                    ></path>
                   </svg>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -101,20 +108,27 @@
                   >
                     <path
                       d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
-                    />
+                    ></path>
                   </svg>
                 </div>
-    
-                <p class="mt-0.5 text-lg font-medium text-gray-900">Julia Rodríguez</p>
+
+                <p class="mt-0.5 text-lg font-medium text-gray-900">
+                  Julia Rodríguez
+                </p>
               </div>
             </div>
-    
+
             <p class="mt-4 text-gray-700">
-              Llevo menos de un mes con esta plataforma y ya noto cambios físicos y a nivel personal. Estoy muy contenta.
+              Llevo menos de un mes con esta plataforma y ya noto cambios
+              físicos y a nivel personal. Estoy muy contenta.
             </p>
           </blockquote>
         </a>
-        <a href="/planes" class="keen-slider__slide" style="grid-template-columns: repeat(auto-fit, minmax(min-content, 1fr)); padding:2rem">
+        <a
+          href="/planes"
+          class="keen-slider__slide"
+          style="grid-template-columns: repeat(auto-fit, minmax(min-content, 1fr)); padding:2rem"
+        >
           <blockquote class="rounded bg-gray-50 p-6 shadow-lg sm:p-8">
             <div class="flex items-center gap-4">
               <img
@@ -122,7 +136,7 @@
                 src="/imgTestimonios/T2.webp"
                 class="size-16 rounded-xl object-contain bg-black"
               />
-    
+
               <div>
                 <div class="flex gap-0.5 text-green-500">
                   <svg
@@ -133,7 +147,7 @@
                   >
                     <path
                       d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
-                    />
+                    ></path>
                   </svg>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -143,7 +157,7 @@
                   >
                     <path
                       d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
-                    />
+                    ></path>
                   </svg>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -153,7 +167,7 @@
                   >
                     <path
                       d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
-                    />
+                    ></path>
                   </svg>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -163,7 +177,7 @@
                   >
                     <path
                       d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
-                    />
+                    ></path>
                   </svg>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -173,20 +187,27 @@
                   >
                     <path
                       d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
-                    />
+                    ></path>
                   </svg>
                 </div>
-    
-                <p class="mt-0.5 text-lg font-medium text-gray-900">Toñi Rodríguez</p>
+
+                <p class="mt-0.5 text-lg font-medium text-gray-900">
+                  Toñi Rodríguez
+                </p>
               </div>
             </div>
-    
+
             <p class="mt-4 text-gray-700">
-                Movilizate está muy pendiente con mi día a día, da mucha confianza y ganas en seguir adelante... gracia!
+              Movilizate está muy pendiente con mi día a día, da mucha confianza
+              y ganas en seguir adelante... gracia!
             </p>
           </blockquote>
         </a>
-        <a href="/planes" class="keen-slider__slide" style="grid-template-columns: repeat(auto-fit, minmax(min-content, 1fr)); padding:2rem">
+        <a
+          href="/planes"
+          class="keen-slider__slide"
+          style="grid-template-columns: repeat(auto-fit, minmax(min-content, 1fr)); padding:2rem"
+        >
           <blockquote class="rounded bg-gray-50 p-6 shadow-lg sm:p-8">
             <div class="flex items-center gap-4">
               <img
@@ -194,7 +215,7 @@
                 src="/imgTestimonios/T3.webp"
                 class="size-16 rounded-xl object-cover bg-black"
               />
-    
+
               <div>
                 <div class="flex gap-0.5 text-green-500">
                   <svg
@@ -205,7 +226,7 @@
                   >
                     <path
                       d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
-                    />
+                    ></path>
                   </svg>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -215,7 +236,7 @@
                   >
                     <path
                       d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
-                    />
+                    ></path>
                   </svg>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -225,7 +246,7 @@
                   >
                     <path
                       d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
-                    />
+                    ></path>
                   </svg>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -235,7 +256,7 @@
                   >
                     <path
                       d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
-                    />
+                    ></path>
                   </svg>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -245,20 +266,27 @@
                   >
                     <path
                       d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
-                    />
+                    ></path>
                   </svg>
                 </div>
-    
-                <p class="mt-0.5 text-lg font-medium text-gray-900">Paula Mª Ruiz Florido</p>
+
+                <p class="mt-0.5 text-lg font-medium text-gray-900">
+                  Paula Mª Ruiz Florido
+                </p>
               </div>
             </div>
-    
+
             <p class="mt-4 text-gray-700">
-                Ángel está siempre pendiente y animándote para seguir avanzando. Los ejercicios se hacen en un rato y la nutrición se lleva muy bien.¡Muchas gracias!
+              Ángel está siempre pendiente y animándote para seguir avanzando.
+              Los ejercicios se hacen en un rato y la nutrición se lleva muy
+              bien.¡Muchas gracias!
             </p>
           </blockquote>
         </a>
-        <a href="/planes" class="keen-slider__slide" style="grid-template-columns: repeat(auto-fit, minmax(min-content, 1fr)); padding:2rem">
+        <div
+          class="keen-slider__slide"
+          style="grid-template-columns: repeat(auto-fit, minmax(min-content, 1fr)); padding:2rem"
+        >
           <blockquote class="rounded bg-gray-50 p-6 shadow-lg sm:p-8">
             <div class="flex items-center gap-4">
               <img
@@ -266,7 +294,7 @@
                 src="/imgTestimonios/T4.webp"
                 class="size-16 rounded-xl object-cover bg-black"
               />
-    
+
               <div>
                 <div class="flex gap-0.5 text-green-500">
                   <svg
@@ -277,7 +305,7 @@
                   >
                     <path
                       d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
-                    />
+                    ></path>
                   </svg>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -287,7 +315,7 @@
                   >
                     <path
                       d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
-                    />
+                    ></path>
                   </svg>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -297,7 +325,7 @@
                   >
                     <path
                       d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
-                    />
+                    ></path>
                   </svg>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -307,7 +335,7 @@
                   >
                     <path
                       d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
-                    />
+                    ></path>
                   </svg>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -317,20 +345,35 @@
                   >
                     <path
                       d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
-                    />
+                    ></path>
                   </svg>
                 </div>
-    
-                <p class="mt-0.5 text-lg font-medium text-gray-900">Lily's Dulce y Salado</p>
+
+                <p class="mt-0.5 text-lg font-medium text-gray-900">
+                  Lily's Dulce y Salado
+                </p>
               </div>
             </div>
-    
-            <p class="mt-4 text-gray-700">
-              Agradecida infinitamente con El Universo por ponerme en el camino a Movilízate 💚 siguiendo el plan de nutrición y de ejercicios personalizado que hacen con mucha dedicación, los resultados se vayan notando prácticamente desde el primer momento 💪un millón de gracias Ángel y a todo tu equipo por vuestra profesionalidad y por darle un reseteo a mi metabolismo, además que me gusta mucho cuidarme y moverme. Anímate y no olvides que la disciplina y el amor son la base de todo.
+
+            <p class="mt-4 text-gray-700 clipped-text">
+              Agradecida infinitamente con El Universo por ponerme en el camino
+              a Movilízate 💚 siguiendo el plan de nutrición y de ejercicios
+              personalizado que hacen con mucha dedicación, los resultados se
+              vayan notando prácticamente desde el primer momento 💪un millón de
+              gracias Ángel y a todo tu equipo por vuestra profesionalidad y por
+              darle un reseteo a mi metabolismo, además que me gusta mucho
+              cuidarme y moverme. Anímate y no olvides que la disciplina y el
+              amor son la base de todo.
             </p>
+            <!-- Botón de "seguir leyendo" -->
+            <button class="read-more-btn">Seguir leyendo</button>
           </blockquote>
-        </a>
-        <a href="/planes" class="keen-slider__slide" style="grid-template-columns: repeat(auto-fit, minmax(min-content, 1fr)); padding:2rem">
+        </div>
+        <a
+          href="/planes"
+          class="keen-slider__slide"
+          style="grid-template-columns: repeat(auto-fit, minmax(min-content, 1fr)); padding:2rem"
+        >
           <blockquote class="rounded bg-gray-50 p-6 shadow-lg sm:p-8">
             <div class="flex items-center gap-4">
               <img
@@ -338,7 +381,7 @@
                 src="/imgTestimonios/T5.webp"
                 class="size-16 rounded-xl object-contain bg-black"
               />
-    
+
               <div>
                 <div class="flex gap-0.5 text-green-500">
                   <svg
@@ -349,7 +392,7 @@
                   >
                     <path
                       d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
-                    />
+                    ></path>
                   </svg>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -359,7 +402,7 @@
                   >
                     <path
                       d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
-                    />
+                    ></path>
                   </svg>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -369,7 +412,7 @@
                   >
                     <path
                       d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
-                    />
+                    ></path>
                   </svg>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -379,7 +422,7 @@
                   >
                     <path
                       d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
-                    />
+                    ></path>
                   </svg>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -389,20 +432,27 @@
                   >
                     <path
                       d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
-                    />
+                    ></path>
                   </svg>
                 </div>
-    
-                <p class="mt-0.5 text-lg font-medium text-gray-900">Petya Panova</p>
+
+                <p class="mt-0.5 text-lg font-medium text-gray-900">
+                  Petya Panova
+                </p>
               </div>
             </div>
-    
+
             <p class="mt-4 text-gray-700">
-              Ángel es muy atento y abierto para cualquier duda que surja. Recomendable.
+              Ángel es muy atento y abierto para cualquier duda que surja.
+              Recomendable.
             </p>
           </blockquote>
         </a>
-        <a href="/planes" class="keen-slider__slide" style="grid-template-columns: repeat(auto-fit, minmax(min-content, 1fr)); padding:2rem">
+        <a
+          href="/planes"
+          class="keen-slider__slide"
+          style="grid-template-columns: repeat(auto-fit, minmax(min-content, 1fr)); padding:2rem"
+        >
           <blockquote class="rounded bg-gray-50 p-6 shadow-lg sm:p-8">
             <div class="flex items-center gap-4">
               <img
@@ -410,7 +460,7 @@
                 src="/imgTestimonios/T6.webp"
                 class="size-16 rounded-xl object-cover bg-black"
               />
-    
+
               <div>
                 <div class="flex gap-0.5 text-green-500">
                   <svg
@@ -421,7 +471,7 @@
                   >
                     <path
                       d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
-                    />
+                    ></path>
                   </svg>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -431,7 +481,7 @@
                   >
                     <path
                       d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
-                    />
+                    ></path>
                   </svg>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -441,7 +491,7 @@
                   >
                     <path
                       d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
-                    />
+                    ></path>
                   </svg>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -451,7 +501,7 @@
                   >
                     <path
                       d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
-                    />
+                    ></path>
                   </svg>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -461,20 +511,27 @@
                   >
                     <path
                       d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
-                    />
+                    ></path>
                   </svg>
                 </div>
-    
-                <p class="mt-0.5 text-lg font-medium text-gray-900">Toñi Rodríguez</p>
+
+                <p class="mt-0.5 text-lg font-medium text-gray-900">
+                  Toñi Rodríguez
+                </p>
               </div>
             </div>
-    
+
             <p class="mt-4 text-gray-700">
-                Movilizate está muy pendiente con mi día a día, da mucha confianza y ganas en seguir adelante... gracia!
+              Movilizate está muy pendiente con mi día a día, da mucha confianza
+              y ganas en seguir adelante... gracia!
             </p>
           </blockquote>
         </a>
-        <a href="/planes" class="keen-slider__slide" style="grid-template-columns: repeat(auto-fit, minmax(min-content, 1fr)); padding:2rem">
+        <a
+          href="/planes"
+          class="keen-slider__slide"
+          style="grid-template-columns: repeat(auto-fit, minmax(min-content, 1fr)); padding:2rem"
+        >
           <blockquote class="rounded bg-gray-50 p-6 shadow-lg sm:p-8">
             <div class="flex items-center gap-4">
               <img
@@ -482,7 +539,7 @@
                 src="/imgTestimonios/T7.webp"
                 class="size-16 rounded-xl object-cover bg-black"
               />
-    
+
               <div>
                 <div class="flex gap-0.5 text-green-500">
                   <svg
@@ -493,7 +550,7 @@
                   >
                     <path
                       d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
-                    />
+                    ></path>
                   </svg>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -503,7 +560,7 @@
                   >
                     <path
                       d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
-                    />
+                    ></path>
                   </svg>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -513,7 +570,7 @@
                   >
                     <path
                       d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
-                    />
+                    ></path>
                   </svg>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -523,7 +580,7 @@
                   >
                     <path
                       d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
-                    />
+                    ></path>
                   </svg>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -533,20 +590,27 @@
                   >
                     <path
                       d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
-                    />
+                    ></path>
                   </svg>
                 </div>
-    
-                <p class="mt-0.5 text-lg font-medium text-gray-900">Toñi Rodríguez</p>
+
+                <p class="mt-0.5 text-lg font-medium text-gray-900">
+                  Toñi Rodríguez
+                </p>
               </div>
             </div>
-    
+
             <p class="mt-4 text-gray-700">
-                Movilizate está muy pendiente con mi día a día, da mucha confianza y ganas en seguir adelante... gracia!
+              Movilizate está muy pendiente con mi día a día, da mucha confianza
+              y ganas en seguir adelante... gracia!
             </p>
           </blockquote>
         </a>
-        <a href="/planes" class="keen-slider__slide" style="grid-template-columns: repeat(auto-fit, minmax(min-content, 1fr)); padding:2rem">
+        <a
+          href="/planes"
+          class="keen-slider__slide"
+          style="grid-template-columns: repeat(auto-fit, minmax(min-content, 1fr)); padding:2rem"
+        >
           <blockquote class="rounded bg-gray-50 p-6 shadow-lg sm:p-8">
             <div class="flex items-center gap-4">
               <img
@@ -554,7 +618,7 @@
                 src="/imgTestimonios/T8.webp"
                 class="size-16 rounded-xl object-contain bg-black"
               />
-    
+
               <div>
                 <div class="flex gap-0.5 text-green-500">
                   <svg
@@ -565,7 +629,7 @@
                   >
                     <path
                       d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
-                    />
+                    ></path>
                   </svg>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -575,7 +639,7 @@
                   >
                     <path
                       d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
-                    />
+                    ></path>
                   </svg>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -585,7 +649,7 @@
                   >
                     <path
                       d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
-                    />
+                    ></path>
                   </svg>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -595,7 +659,7 @@
                   >
                     <path
                       d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
-                    />
+                    ></path>
                   </svg>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -605,20 +669,27 @@
                   >
                     <path
                       d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
-                    />
+                    ></path>
                   </svg>
                 </div>
-    
-                <p class="mt-0.5 text-lg font-medium text-gray-900">Toñi Rodríguez</p>
+
+                <p class="mt-0.5 text-lg font-medium text-gray-900">
+                  Toñi Rodríguez
+                </p>
               </div>
             </div>
-    
+
             <p class="mt-4 text-gray-700">
-                Movilizate está muy pendiente con mi día a día, da mucha confianza y ganas en seguir adelante... gracia!
+              Movilizate está muy pendiente con mi día a día, da mucha confianza
+              y ganas en seguir adelante... gracia!
             </p>
           </blockquote>
         </a>
-        <a href="/planes" class="keen-slider__slide" style="grid-template-columns: repeat(auto-fit, minmax(min-content, 1fr)); padding:2rem">
+        <a
+          href="/planes"
+          class="keen-slider__slide"
+          style="grid-template-columns: repeat(auto-fit, minmax(min-content, 1fr)); padding:2rem"
+        >
           <blockquote class="rounded bg-gray-50 p-6 shadow-lg sm:p-8">
             <div class="flex items-center gap-4">
               <img
@@ -626,7 +697,7 @@
                 src="/imgTestimonios/T9.webp"
                 class="size-16 rounded-xl object-contain bg-black"
               />
-    
+
               <div>
                 <div class="flex gap-0.5 text-green-500">
                   <svg
@@ -637,7 +708,7 @@
                   >
                     <path
                       d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
-                    />
+                    ></path>
                   </svg>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -647,7 +718,7 @@
                   >
                     <path
                       d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
-                    />
+                    ></path>
                   </svg>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -657,7 +728,7 @@
                   >
                     <path
                       d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
-                    />
+                    ></path>
                   </svg>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -667,7 +738,7 @@
                   >
                     <path
                       d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
-                    />
+                    ></path>
                   </svg>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -677,16 +748,19 @@
                   >
                     <path
                       d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
-                    />
+                    ></path>
                   </svg>
                 </div>
-    
-                <p class="mt-0.5 text-lg font-medium text-gray-900">Toñi Rodríguez</p>
+
+                <p class="mt-0.5 text-lg font-medium text-gray-900">
+                  Toñi Rodríguez
+                </p>
               </div>
             </div>
-    
+
             <p class="mt-4 text-gray-700">
-                Movilizate está muy pendiente con mi día a día, da mucha confianza y ganas en seguir adelante... gracia!
+              Movilizate está muy pendiente con mi día a día, da mucha confianza
+              y ganas en seguir adelante... gracia!
             </p>
           </blockquote>
         </a>
@@ -707,7 +781,10 @@
           stroke="currentColor"
           class="size-5 rtl:rotate-180"
         >
-          <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M15.75 19.5L8.25 12l7.5-7.5"></path>
         </svg>
       </button>
       <button
@@ -726,11 +803,59 @@
             d="M9 5l7 7-7 7"
             stroke-linecap="round"
             stroke-linejoin="round"
-            stroke-width="2"
-          />
+            stroke-width="2"></path>
         </svg>
       </button>
     </div>
-
   </div>
 </section>
+
+<style>
+  /* Estilo para recortar el texto */
+  .clipped-text {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+  }
+
+  /* Estilo del botón "seguir leyendo" */
+  .read-more-btn {
+    display: none; /* Ocultar el botón por defecto */
+    background-color: #4caf50; /* Color de fondo */
+    color: white; /* Color del texto */
+    padding: 10px 15px; /* Espaciado interno */
+    border: none; /* Sin borde */
+    cursor: pointer; /* Cursor al pasar */
+    border-radius: 4px; /* Bordes redondeados */
+    margin-top: 10px; /* Margen superior */
+  }
+</style>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const textBlocks = document.querySelectorAll<HTMLElement>(".clipped-text");
+
+    textBlocks.forEach(
+      (block: HTMLElement, _: number, __: NodeListOf<HTMLElement>) => {
+        const originalHeight = block.clientHeight;
+        const maxHeight = 100; // Altura máxima deseada en píxeles
+
+        if (originalHeight > maxHeight) {
+          block.style.height = maxHeight + "px";
+
+          const readMoreBtn = block.nextElementSibling as HTMLElement;
+          readMoreBtn.style.display = "inline"; // Mostrar el botón
+          readMoreBtn.addEventListener("click", function () {
+            if (block.style.height === maxHeight + "px") {
+              block.style.height = "600px";
+              this.textContent = "Leer menos";
+            } else {
+              block.style.height = maxHeight + "px";
+              this.textContent = "Seguir leyendo";
+            }
+          });
+        }
+      },
+    );
+  });
+</script>

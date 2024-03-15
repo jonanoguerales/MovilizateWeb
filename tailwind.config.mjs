@@ -7,6 +7,8 @@ export default {
 			screens: {
 			  '3xl': '1599px',
 			  '4xl': '1889px',
+			  'sx' : '394px',
+			  'sxx' : '378px',
 			},
 		  },
 	},
