@@ -12,7 +12,7 @@ const { nombre, texto, img, clase } = Astro.props;
     class="keen-slider__slide"
     style="grid-template-columns: repeat(auto-fit, minmax(min-content, 1fr)); padding:2rem"
 >
-    <blockquote class="rounded bg-gray-50 p-6 shadow-lg sm:p-8">
+    <blockquote class="rounded bg-gray-50 p-6 shadow-lg sm:p-8 h-64">
         <div class="flex items-center gap-4">
             <img
                 alt=""
@@ -80,10 +80,10 @@ const { nombre, texto, img, clase } = Astro.props;
             </div>
         </div>
 
-        <p class="mt-4 text-gray-700 clipped-text">
+        <p class="mt-4 text-gray-700 clipped-text" id="clipped-text">
             {texto}
         </p>
-        <button id="mi-boton" class="btn">Seguir leyendo</button>
+        <button id="mi-boton" class="btn"></button>
     </blockquote>
 </div>
 

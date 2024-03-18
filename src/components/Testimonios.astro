@@ -38,12 +38,53 @@ import Testimonio from "./Testimonio.astro";
     },
     [],
   );
-
   const keenSliderPrevious = document.getElementById("keen-slider-previous");
   const keenSliderNext = document.getElementById("keen-slider-next");
 
   keenSliderPrevious.addEventListener("click", () => keenSlider.prev());
   keenSliderNext.addEventListener("click", () => keenSlider.next());
+</script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const blockquotes = document.getElementsByTagName("blockquote");
+    let maxHeight = 100; // Altura máxima deseada
+
+    for (let i = 0; i < blockquotes.length; i++) {
+      const blockquote = blockquotes[i];
+      const paragraphs = blockquote.getElementsByTagName("p");
+      for (let j = 0; j < paragraphs.length; j++) {
+        const paragraph = paragraphs[j];
+        const paragraphHeight = paragraph.clientHeight;
+
+        if (paragraphHeight > maxHeight) {
+          const button = blockquote.querySelector("button"); // Buscar un botón dentro del bloque de citas
+          if (button) {
+            button.style.display = "inline-block"; // Mostrar el botón si se encuentra
+            button.textContent = "Seguir leyendo";
+
+            button.addEventListener("click", function () {
+              if (paragraph.style.maxHeight === "none") {
+                paragraph.style.maxHeight = maxHeight + "px";
+                this.textContent = "Seguir leyendo";
+              } else {
+                paragraph.style.maxHeight = "none";
+                this.textContent = "Leer menos";
+              }
+            });
+
+            paragraph.style.maxHeight = maxHeight + "px";
+            blockquote.classList.remove("h-64"); // Eliminar la clase del blockquote
+            break; // Salir del bucle al encontrar un párrafo que cumple la condición
+          }
+        } else {
+          const button = blockquote.querySelector("button"); // Buscar un botón dentro del bloque de citas
+          if (button) {
+            button.style.display = "none"; // Ocultar el botón si el párrafo es más corto que la altura máxima
+          }
+        }
+      }
+    }
+  });
 </script>
 
 <section class="bg-white overflow-hidden">
@@ -57,8 +98,8 @@ import Testimonio from "./Testimonio.astro";
     <div class="mx-6 my-8 lg:col-span-3 lg:mx-0">
       <div id="keen-slider" class="keen-slider">
         <Testimonio
-          texto="Movilizate está muy pendiente con mi día a día, da mucha confianza y ganas en seguir adelante... gracias!"
-          nombre="Toñi Rodríguez"
+          texto="Llevo menos de un mes con esta plataforma y ya noto cambios físicos y a nivel personal. Estoy muy contenta."
+          nombre="Julia Rodríguez"
           img="/imgTestimonios/T1.webp"
           clase="object-contain"
         />
@@ -125,46 +166,3 @@ import Testimonio from "./Testimonio.astro";
     </div>
   </div>
 </section>
-
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const blockquotes = document.getElementsByTagName("blockquote");
-    let maxHeight = 100; // Altura máxima deseada
-
-    for (let i = 0; i < blockquotes.length; i++) {
-      const blockquote = blockquotes[i];
-      const paragraphs = blockquote.getElementsByTagName("p");
-      for (let j = 0; j < paragraphs.length; j++) {
-        const paragraph = paragraphs[j];
-        const paragraphHeight = paragraph.clientHeight;
-
-        if (paragraphHeight > maxHeight) {
-          const button = blockquote.querySelector("button"); // Buscar un botón dentro del bloque de citas
-          if (button) {
-            button.style.display = "inline-block"; // Mostrar el botón si se encuentra
-            button.textContent = "Seguir leyendo";
-
-            button.addEventListener("click", function () {
-              if (paragraph.style.maxHeight === "none") {
-                paragraph.style.maxHeight = maxHeight + "px";
-                this.textContent = "Seguir leyendo";
-              } else {
-                paragraph.style.maxHeight = "none";
-                this.textContent = "Leer menos";
-              }
-            });
-
-            paragraph.style.maxHeight = maxHeight + "px";
-            blockquote.classList.remove("h-[297.96px]");
-            break; // Salir del bucle al encontrar un párrafo que cumple la condición
-          }
-        } else {
-          const button = blockquote.querySelector("button"); // Buscar un botón dentro del bloque de citas
-          if (button) {
-            button.style.display = "none"; // Ocultar el botón si el párrafo es más corto que la altura máxima
-          }
-        }
-      }
-    }
-  });
-</script>
