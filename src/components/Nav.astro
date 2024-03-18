@@ -78,55 +78,57 @@
                 class="rounded-md px-3 py-2 text-base font-medium"
                 >Sobre nosotros</a
             >
-            <a
-                href="/planes"
-                class="rounded-md px-3 py-2 text-base font-medium"
+            <a href="/planes" class="rounded-md px-3 py-2 text-base font-medium"
                 >Planes</a
             >
             <a
                 href="/contacto"
-                class="rounded-md px-3 py-2 text-base font-medium"
-                >Contacto</a
+                class="rounded-md px-3 py-2 text-base font-medium">Contacto</a
             >
         </div>
     </div>
 </nav>
 
 <script>
-    document.addEventListener('DOMContentLoaded', () => {
-        const mobileMenuButton: HTMLElement | null = document.getElementById('mobile-menu-button');
-        const mobileMenu: HTMLElement | null = document.getElementById('mobile-menu');
-        const currentPage = window.location.pathname; // Obtener la URL actual
+    document.addEventListener("DOMContentLoaded", () => {
+        const mobileMenuButton = document.getElementById("mobile-menu-button");
+        const mobileMenu = document.getElementById("mobile-menu");
+        const currentPage = window.location.pathname;
 
         if (mobileMenuButton && mobileMenu) {
-            mobileMenuButton.addEventListener('click', () => {
-                mobileMenu.style.display = mobileMenu.style.display === 'none' || mobileMenu.style.display === '' ? 'block' : 'none';
+            mobileMenuButton.addEventListener("click", () => {
+                mobileMenu.style.display =
+                    mobileMenu.style.display === "none" ||
+                    mobileMenu.style.display === ""
+                        ? "block"
+                        : "none";
             });
 
-            // Obtener todos los enlaces del menú móvil
-            const links = mobileMenu.querySelectorAll('a');
+            const links = mobileMenu.querySelectorAll("a");
 
-            // Iterar sobre los enlaces y marcar la página actual
-            links.forEach(link => {
-                if (link.getAttribute('href') === currentPage) {
-                    link.classList.add('current');
+            links.forEach((link) => {
+                if (link.getAttribute("href") === currentPage) {
+                    link.classList.add("current");
+                } else {
+                    link.classList.remove("current");
                 }
             });
         } else {
-            console.error('No se encontraron los elementos del menú móvil');
+            console.error("No se encontraron los elementos del menú móvil");
         }
-        
-        // Obtener todos los enlaces del menú principal
-        const links = document.querySelectorAll('nav a');
 
-        // Iterar sobre los enlaces y marcar la página actual
-        links.forEach(link => {
-            if (link.getAttribute('href') === currentPage) {
-                link.classList.add('current');
+        const navLinks = document.querySelectorAll("nav a");
+
+        navLinks.forEach((link) => {
+            if (link.getAttribute("href") === currentPage) {
+                link.classList.add("current");
+            } else {
+                link.classList.remove("current");
             }
         });
     });
 </script>
+
 <style>
     /* Estilo para el menú móvil */
     #mobile-menu {
@@ -149,13 +151,13 @@
     }
     /* Estilo para el enlace activo */
     #mobile-menu a.current {
-        background-color: #91DAF6; /* Color de fondo azul */
+        background-color: #91daf6; /* Color de fondo azul */
         color: white; /* Color de texto blanco */
     }
     /* Estilo para el enlace activo en el menú principal */
     nav a.current {
         border-bottom-width: 4px;
-        border-color:#91DAF6;
-        color:black;
+        border-color: #91daf6;
+        color: black;
     }
 </style>
