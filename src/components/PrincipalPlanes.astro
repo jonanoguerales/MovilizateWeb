@@ -1,3 +1,10 @@
+---
+import IconoCasa from "../components/icons/IconoCasa.astro";
+import IconoMovil from "../components/icons/IconoMovil.astro";
+import IconoEntrenador from "../components/icons/IconoEntrenador.astro";
+import IconoMusculo from "../components/icons/IconoMusculo.astro";
+---
+
 <div
   class="relative h-screen flex items-center"
   style="height: calc(100vh - 7rem)"
@@ -18,10 +25,10 @@
     class="text-white text-center z-10 relative md:ml-[15%] gap-7 flex flex-col items-center w-1/2 max-md:pb-40 max-md:w-full max-md:mx-4"
   >
     <h1 class="text-3xl md:text-6xl lg:text-7xl 4xl:text-8xl font-bold mb-4">
-      <p class="text-3xl md:text-7xl lg:text-8xl 4xl:text-9xl">CONSIGUE</p>
+      <p class="text-4xl md:text-7xl lg:text-8xl 4xl:text-9xl">CONSIGUE</p>
       <p>EL CUERPO QUE QUIERES</p>
       <p>
-        PARA<span class="ml-2 text-3xl md:text-7xl lg:text-8xl 4xl:text-9xl"
+        PARA<span class="ml-2 text-4xl md:text-7xl lg:text-8xl 4xl:text-9xl"
           >SIEMPRE</span
         >
       </p>
@@ -29,11 +36,53 @@
     <p class="text-lg md:text-xl lg:text-2xl">
       Te seguro cambie tu físico en menos de 90 días y todo desde casa!
     </p>
-    <a
-      href="#"
-      class="inline-flex justify-center w-52 hover:text-black items-center py-3 px-5 sm:ms-4 text-lg font-medium text-center text-white rounded-lg border border-white hover:bg-white"
-    >
-      APÚNTATE YA!
-    </a>
+    <div class="grid grid-cols-4 info mx-auto max-sm:pb-10 md:px-4 md:gap-4">
+      <div class="h-full w-20 md:w-28 rounded-lg flex flex-col items-center">
+        <div class="flex items-end">
+          <IconoCasa class="size-8 md:size-12" />
+        </div>
+        <div class="mt-4">
+          <h2 class="text-[10px] md:text-sm lg:text-base font-bold">
+            Entrena desde casa
+          </h2>
+        </div>
+      </div>
+      <div class="h-full w-20 md:w-28 rounded-lg flex flex-col items-center">
+        <div class="flex items-end">
+          <IconoMovil class="size-8 md:size-12" />
+        </div>
+        <div class="mt-4">
+          <h2 class="text-[10px] md:text-sm lg:text-base font-bold">
+            Todo desde <span>nuestra app</span>
+          </h2>
+        </div>
+      </div>
+      <div class="h-full w-20 md:w-28 rounded-lg flex flex-col items-center">
+        <div class="flex items-end">
+          <IconoEntrenador class="size-8 md:size-12" />
+        </div>
+        <div class="mt-4">
+          <h2 class="text-[10px] md:text-sm lg:text-base font-bold">
+            Coach 24H
+          </h2>
+        </div>
+      </div>
+      <div class="h-full w-20 md:w-28 rounded-lg flex flex-col items-center">
+        <div class="flex items-end">
+          <IconoMusculo class="size-8 md:size-12" />
+        </div>
+        <div class="mt-4 flex flex-col items-center">
+          <h2 class="text-[10px] md:text-sm lg:text-base font-bold">
+            Entrenamiento
+          </h2>
+          <h2 class="text-[10px] md:text-sm lg:text-base font-bold">
+            y nutrición
+          </h2>
+          <h2 class="text-[10px] md:text-sm lg:text-base font-bold">
+            personalizado
+          </h2>
+        </div>
+      </div>
+    </div>
   </div>
 </div>

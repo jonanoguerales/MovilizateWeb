@@ -1,0 +1,60 @@
+---
+import IconoCasa from "../components/icons/IconoCasa.astro";
+import IconoMovil from "../components/icons/IconoMovil.astro";
+import IconoEntrenador from "../components/icons/IconoEntrenador.astro";
+import IconoMusculo from "../components/icons/IconoMusculo.astro";
+
+interface Props {
+    clase: string;
+    sizeiconos: string;
+    sizecont: string;
+    sizeh2: string;
+    sizeh3: string;
+    sizeh4: string;
+    sizeespacio: string;
+}
+const { clase, sizeiconos, sizecont, sizeh2, sizeh3, sizeh4, sizeespacio } =
+    Astro.props;
+---
+
+<div class=`grid info mx-auto max-sm:pb-10 px-4 sm:px-6 items-center ${clase}`>
+    <div class="h-full w-full rounded-lg flex flex-col items-center">
+        <div class=`${sizecont} flex items-end`>
+            <IconoCasa class={sizeiconos} />
+        </div>
+        <div class=`${sizecont} mt-4`>
+            <h2 class=`${sizeh2} font-bold`>
+                Entrena desde <span class={sizeespacio}>casa</span>
+            </h2>
+        </div>
+    </div>
+    <div class="h-full w-full rounded-lg flex flex-col items-center">
+        <div class=`${sizecont} flex items-end`>
+            <IconoMovil class={sizeiconos} />
+        </div>
+        <div class=`${sizecont} mt-4`>
+            <h2 class=`${sizeh3} font-bold`>
+                Todo desde <span class={sizeespacio}>nuestra app</span>
+            </h2>
+        </div>
+    </div>
+    <div class="h-full w-full rounded-lg flex flex-col items-center">
+        <div class=`${sizecont} flex items-end`>
+            <IconoEntrenador class={sizeiconos} />
+        </div>
+        <div class=`${sizecont} mt-4`>
+            <h2 class=`${sizeh4} font-bold`>Coach 24H</h2>
+        </div>
+    </div>
+    <div class="h-full w-full rounded-lg flex flex-col items-center">
+        <div class=`${sizecont} flex items-end`>
+            <IconoMusculo class={sizeiconos} />
+        </div>
+        <div class=`${sizecont} mt-4 flex flex-col items-center`>
+            <h2 class=`${sizeh4} font-bold`>Entrenamiento</h2>
+            <h2 class=`${sizeh3} font-bold`>
+                y nutrición<span class={sizeespacio}>personalizado</span>
+            </h2>
+        </div>
+    </div>
+</div>

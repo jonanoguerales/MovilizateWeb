@@ -1,11 +1,8 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import IconoCasa from "../components/icons/IconoCasa.astro";
-import IconoMovil from "../components/icons/IconoMovil.astro";
-import IconoEntrenador from "../components/icons/IconoEntrenador.astro";
-import IconoMusculo from "../components/icons/IconoMusculo.astro";
 import Testimonios from "../components/Testimonios.astro";
 import Patrocinadores from "../components/Patrocinadores.astro";
+import Metodos from "../components/Metodos.astro";
 ---
 
 <Layout
@@ -69,55 +66,15 @@ import Patrocinadores from "../components/Patrocinadores.astro";
 				</a>
 			</div>
 		</div>
-		<div
-			class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 xl:gap-10 info mx-auto pt-10 max-sm:pb-10 px-4 sm:px-6 lg:px-40 items-center"
-		>
-			<div class="h-full w-full rounded-lg flex flex-col items-center">
-				<div class="h-[150px] flex items-end">
-					<IconoCasa class="size-28" />
-				</div>
-				<div class="h-[150px] mt-4">
-					<h2
-						class="text-3xl font-bold flex max-3xl:flex-col max-3xl:items-center"
-					>
-						Entrena desde <span class="ml-2">casa</span>
-					</h2>
-				</div>
-			</div>
-			<div class="h-full w-full rounded-lg flex flex-col items-center">
-				<div class="h-[150px] flex items-end">
-					<IconoMovil class="size-28" />
-				</div>
-				<div class="h-[150px] mt-4">
-					<h2
-						class="text-3xl font-bold flex max-4xl:flex-col max-4xl:items-center"
-					>
-						Todo desde <span class="ml-2">nuestra app</span>
-					</h2>
-				</div>
-			</div>
-			<div class="h-full w-full rounded-lg flex flex-col items-center">
-				<div class="h-[150px] flex items-end">
-					<IconoEntrenador class="size-28" />
-				</div>
-				<div class="h-[150px] mt-4">
-					<h2 class="text-3xl font-bold">Coach 24H</h2>
-				</div>
-			</div>
-			<div class="h-full w-full rounded-lg flex flex-col items-center">
-				<div class="h-[150px] flex items-end">
-					<IconoMusculo class="size-28" />
-				</div>
-				<div class="h-[150px] mt-4 flex flex-col items-center">
-					<h2 class="text-3xl font-bold">Entrenamiento</h2>
-					<h2
-						class="text-3xl font-bold flex max-4xl:flex-col max-4xl:items-center"
-					>
-						y nutrición<span class="ml-2">personalizado</span>
-					</h2>
-				</div>
-			</div>
-		</div>
+		<Metodos
+			clase="bg-[#2929AD] text-white grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 pt-10 lg:px-40 xl:gap-10"
+			sizeiconos="size-28"
+			sizecont="h-[150px]"
+			sizeh2="text-3xl flex max-3xl:flex-col max-3xl:items-center"
+			sizeh3="text-3xl flex max-4xl:flex-col max-4xl:items-center"
+			sizeh4="text-3xl"
+			sizeespacio="ml-2"
+		/>
 		<Testimonios />
 		<Patrocinadores />
 	</main>
