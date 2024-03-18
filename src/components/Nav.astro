@@ -1,8 +1,3 @@
----
-const baseUrl = import.meta.url; // Obtiene la URL base del archivo actual
-const siteUrl = new URL(baseUrl).origin; // Obtiene el origen del sitio web
----
-
 <nav>
     <div class="px-8 sm:px-6 lg:px-16 overflow-hidden">
         <div class="flex h-28 w-full items-center justify-between md:px-10">
@@ -23,17 +18,17 @@ const siteUrl = new URL(baseUrl).origin; // Obtiene el origen del sitio web
                         aria-current="page">Inicio</a
                     >
                     <a
-                        href="/sobreNosotros"
+                        href="/sobreNosotros/"
                         class="border-b-4 border-transparent hover:border-b-4 hover:border-[#91DAF6] hover:text-black rounded-md px-3 py-2 text-xl font-medium {{ request()->is('sobreNosotros') ? 'bg-blue-400 text-white' : '' }}"
                         >Sobre nosotros</a
                     >
                     <a
-                        href="/planes"
+                        href="/planes/"
                         class="border-b-4 border-transparent hover:border-b-4 hover:border-[#91DAF6] hover:text-black rounded-md px-3 py-2 text-xl font-medium {{ request()->is('planes') ? 'bg-blue-400 text-white' : '' }}"
                         >Planes</a
                     >
                     <a
-                        href="/contacto"
+                        href="/contacto/"
                         class="border-b-4 border-transparent hover:border-b-4 hover:border-[#91DAF6] hover:text-black rounded-md px-3 py-2 text-xl font-medium {{ request()->is('contacto') ? 'bg-blue-400 text-white' : '' }}"
                         >Contacto</a
                     >
@@ -79,16 +74,16 @@ const siteUrl = new URL(baseUrl).origin; // Obtiene el origen del sitio web
                 aria-current="page">Inicio</a
             >
             <a
-                href={siteUrl + "/sobreNosotros"}
+                href="/sobreNosotros/"
                 class="rounded-md px-3 py-2 text-base font-medium"
                 >Sobre nosotros</a
             >
             <a
-                href={siteUrl + "/planes"}
+                href="/planes/"
                 class="rounded-md px-3 py-2 text-base font-medium">Planes</a
             >
             <a
-                href={siteUrl + "/contacto"}
+                href="/contacto/"
                 class="rounded-md px-3 py-2 text-base font-medium">Contacto</a
             >
         </div>
