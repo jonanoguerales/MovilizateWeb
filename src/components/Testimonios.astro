@@ -69,13 +69,13 @@ import Testimonio from "./Testimonio.astro";
           clase="contain"
         />
         <Testimonio
-          texto="Movilizate está muy pendiente con mi día a día, da mucha confianza y ganas en seguir adelante... gracias!"
+          texto="Ángel es muy atento y abierto para cualquier duda que surja. Recomendable."
           nombre="Toñi Rodríguez"
           img="/imgTestimonios/T3.webp"
           clase="cover"
         />
         <Testimonio
-          texto="Movilizate está muy pendiente con mi día a día, da mucha confianza y ganas en seguir adelante... gracias!"
+          texto="Agradecida infinitamente con El Universo por ponerme en el camino a Movilízate 💚 siguiendo el plan de nutrición y de ejercicios personalizado que hacen con mucha dedicación, los resultados se vayan notando prácticamente desde el primer momento 💪un millón de gracias Ángel y a todo tu equipo por vuestra profesionalidad y por darle un reseteo a mi metabolismo, además que me gusta mucho cuidarme y moverme. Anímate y no olvides que la disciplina y el amor son la base de todo"
           nombre="Toñi Rodríguez"
           img="/imgTestimonios/T4.webp"
           clase="contain"
@@ -128,40 +128,42 @@ import Testimonio from "./Testimonio.astro";
 
 <script>
   document.addEventListener("DOMContentLoaded", function () {
-    const blockquotes = document.getElementsByTagName("blockquote");
-    let maxHeight = 50; // Altura máxima deseada
+    // Verificar el ancho de la pantalla antes de ejecutar el script
+    if (window.innerWidth >= 1400) {
+      const blockquotes = document.getElementsByTagName("blockquote");
+      let maxHeight = 100; // Altura máxima deseada
 
-    for (let i = 0; i < blockquotes.length; i++) {
-      const blockquote = blockquotes[i];
-      const paragraphs = blockquote.getElementsByTagName("p");
-      for (let j = 0; j < paragraphs.length; j++) {
-        const paragraph = paragraphs[j];
-        const paragraphHeight = paragraph.clientHeight;
+      for (let i = 0; i < blockquotes.length; i++) {
+        const blockquote = blockquotes[i];
+        const paragraphs = blockquote.getElementsByTagName("p");
+        for (let j = 0; j < paragraphs.length; j++) {
+          const paragraph = paragraphs[j];
+          const paragraphHeight = paragraph.clientHeight;
 
-        if (paragraphHeight > maxHeight) {
-          const button = blockquote.querySelector("button"); // Buscar un botón dentro del bloque de citas
-          if (button) {
-            button.style.display = "inline-block"; // Mostrar el botón si se encuentra
-            button.textContent = "Seguir leyendo";
+          if (paragraphHeight > maxHeight) {
+            const button = blockquote.querySelector("button"); // Buscar un botón dentro del bloque de citas
+            if (button) {
+              button.style.display = "inline-block"; // Mostrar el botón si se encuentra
+              button.textContent = "Seguir leyendo";
 
-            button.addEventListener("click", function () {
-              if (paragraph.style.maxHeight === "none") {
-                paragraph.style.maxHeight = maxHeight + "px";
-                this.textContent = "Seguir leyendo";
-              } else {
-                paragraph.style.maxHeight = "none";
-                this.textContent = "Leer menos";
-              }
-            });
+              button.addEventListener("click", function () {
+                if (paragraph.style.maxHeight === "none") {
+                  paragraph.style.maxHeight = maxHeight + "px";
+                  this.textContent = "Seguir leyendo";
+                } else {
+                  paragraph.style.maxHeight = "none";
+                  this.textContent = "Leer menos";
+                }
+              });
 
-            paragraph.style.maxHeight = maxHeight + "px";
-            blockquote.classList.remove("h-64");
-            break; // Salir del bucle al encontrar un párrafo que cumple la condición
-          }
-        } else {
-          const button = blockquote.querySelector("button"); // Buscar un botón dentro del bloque de citas
-          if (button) {
-            button.style.display = "none"; // Ocultar el botón si el párrafo es más corto que la altura máxima
+              paragraph.style.maxHeight = maxHeight + "px";
+              break; // Salir del bucle al encontrar un párrafo que cumple la condición
+            }
+          } else {
+            const button = blockquote.querySelector("button"); // Buscar un botón dentro del bloque de citas
+            if (button) {
+              button.style.display = "none"; // Ocultar el botón si el párrafo es más corto que la altura máxima
+            }
           }
         }
       }

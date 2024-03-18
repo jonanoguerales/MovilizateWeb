@@ -9,6 +9,7 @@ export default {
 			  '4xl': '1889px',
 			  'sx' : '394px',
 			  'sxx' : '378px',
+			  '5xl':'1400px'
 			},
 		  },
 	},
