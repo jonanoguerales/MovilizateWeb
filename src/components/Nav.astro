@@ -1,3 +1,8 @@
+---
+const baseUrl = import.meta.url; // Obtiene la URL base del archivo actual
+const siteUrl = new URL(baseUrl).origin; // Obtiene el origen del sitio web
+---
+
 <nav>
     <div class="px-8 sm:px-6 lg:px-16 overflow-hidden">
         <div class="flex h-28 w-full items-center justify-between md:px-10">
@@ -74,16 +79,16 @@
                 aria-current="page">Inicio</a
             >
             <a
-                href="/sobreNosotros/"
+                href={siteUrl + "/sobreNosotros"}
                 class="rounded-md px-3 py-2 text-base font-medium"
                 >Sobre nosotros</a
             >
             <a
-                href="/planes/"
+                href={siteUrl + "/planes"}
                 class="rounded-md px-3 py-2 text-base font-medium">Planes</a
             >
             <a
-                href="/contacto/"
+                href={siteUrl + "/contacto"}
                 class="rounded-md px-3 py-2 text-base font-medium">Contacto</a
             >
         </div>
