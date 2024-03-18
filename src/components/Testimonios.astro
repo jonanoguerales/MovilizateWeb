@@ -128,42 +128,40 @@ import Testimonio from "./Testimonio.astro";
 
 <script>
   document.addEventListener("DOMContentLoaded", function () {
-    // Verificar el ancho de la pantalla antes de ejecutar el script
-    if (window.innerWidth >= 1400) {
-      const blockquotes = document.getElementsByTagName("blockquote");
-      let maxHeight = 100; // Altura máxima deseada
+    const blockquotes = document.getElementsByTagName("blockquote");
+    let maxHeight = 100; // Altura máxima deseada
 
-      for (let i = 0; i < blockquotes.length; i++) {
-        const blockquote = blockquotes[i];
-        const paragraphs = blockquote.getElementsByTagName("p");
-        for (let j = 0; j < paragraphs.length; j++) {
-          const paragraph = paragraphs[j];
-          const paragraphHeight = paragraph.clientHeight;
+    for (let i = 0; i < blockquotes.length; i++) {
+      const blockquote = blockquotes[i];
+      const paragraphs = blockquote.getElementsByTagName("p");
+      for (let j = 0; j < paragraphs.length; j++) {
+        const paragraph = paragraphs[j];
+        const paragraphHeight = paragraph.clientHeight;
 
-          if (paragraphHeight > maxHeight) {
-            const button = blockquote.querySelector("button"); // Buscar un botón dentro del bloque de citas
-            if (button) {
-              button.style.display = "inline-block"; // Mostrar el botón si se encuentra
-              button.textContent = "Seguir leyendo";
+        if (paragraphHeight > maxHeight) {
+          const button = blockquote.querySelector("button"); // Buscar un botón dentro del bloque de citas
+          if (button) {
+            button.style.display = "inline-block"; // Mostrar el botón si se encuentra
+            button.textContent = "Seguir leyendo";
 
-              button.addEventListener("click", function () {
-                if (paragraph.style.maxHeight === "none") {
-                  paragraph.style.maxHeight = maxHeight + "px";
-                  this.textContent = "Seguir leyendo";
-                } else {
-                  paragraph.style.maxHeight = "none";
-                  this.textContent = "Leer menos";
-                }
-              });
+            button.addEventListener("click", function () {
+              if (paragraph.style.maxHeight === "none") {
+                paragraph.style.maxHeight = maxHeight + "px";
+                this.textContent = "Seguir leyendo";
+              } else {
+                paragraph.style.maxHeight = "none";
+                this.textContent = "Leer menos";
+              }
+            });
 
-              paragraph.style.maxHeight = maxHeight + "px";
-              break; // Salir del bucle al encontrar un párrafo que cumple la condición
-            }
-          } else {
-            const button = blockquote.querySelector("button"); // Buscar un botón dentro del bloque de citas
-            if (button) {
-              button.style.display = "none"; // Ocultar el botón si el párrafo es más corto que la altura máxima
-            }
+            paragraph.style.maxHeight = maxHeight + "px";
+            blockquote.classList.remove("h-[297.96px]");
+            break; // Salir del bucle al encontrar un párrafo que cumple la condición
+          }
+        } else {
+          const button = blockquote.querySelector("button"); // Buscar un botón dentro del bloque de citas
+          if (button) {
+            button.style.display = "none"; // Ocultar el botón si el párrafo es más corto que la altura máxima
           }
         }
       }
