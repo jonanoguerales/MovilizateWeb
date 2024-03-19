@@ -7,7 +7,7 @@ import Testimonio from "./Testimonio.astro";
   rel="stylesheet"
 />
 
-<script type="module">
+<script type="module" is:inline>
   import KeenSlider from "https://cdn.jsdelivr.net/npm/keen-slider@6.8.6/+esm";
 
   const keenSlider = new KeenSlider(
@@ -51,7 +51,7 @@ import Testimonio from "./Testimonio.astro";
   keenSliderPrevious.addEventListener("click", () => keenSlider.prev());
   keenSliderNext.addEventListener("click", () => keenSlider.next());
 </script>
-<script>
+<script is:inline>
   document.addEventListener("DOMContentLoaded", function () {
     const blockquotes = document.getElementsByClassName("seguir"); // Solo elementos con la clase "seguir"
     let maxHeight = 100; // Altura máxima deseada
@@ -66,20 +66,35 @@ import Testimonio from "./Testimonio.astro";
         if (paragraphHeight > maxHeight) {
           const button = document.createElement("button"); // Crear un nuevo botón
           button.textContent = "Seguir leyendo";
+          button.style.backgroundColor = "#22c55e";
+          button.style.color = "white";
+          button.style.padding = "3px 10px";
+          button.style.border = "none";
+          button.style.cursor = "pointer";
+          button.style.borderRadius = "4px";
+          button.style.marginTop = "10px";
+          button.style.fontSize = "smaller";
+          button.addEventListener("mouseover", function () {
+            button.style.backgroundColor = "#1a9148";
+          });
+          button.addEventListener("mouseout", function () {
+            button.style.backgroundColor = "#22c55e";
+          });
           blockquote.appendChild(button); // Agregar el botón al bloque de citas
 
           button.addEventListener("click", function () {
             if (paragraph.style.maxHeight === "none") {
               paragraph.style.maxHeight = maxHeight + "px";
               this.textContent = "Seguir leyendo";
+              blockquote.classList.add("xl:h-[280px]"); // Agregar la clase al blockquote
             } else {
               paragraph.style.maxHeight = "none";
               this.textContent = "Leer menos";
+              blockquote.classList.remove("xl:h-[280px]"); // Eliminar la clase del blockquote
             }
           });
 
           paragraph.style.maxHeight = maxHeight + "px";
-          blockquote.classList.remove("xl:h-[250px]"); // Eliminar la clase del blockquote
           break; // Salir del bucle al encontrar un párrafo que cumple la condición
         }
       }

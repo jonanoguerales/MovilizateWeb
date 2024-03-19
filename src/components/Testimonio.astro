@@ -1,4 +1,6 @@
 ---
+import IconoReview from "./icons/IconoReview.astro";
+
 interface Props {
     nombre: string;
     texto: string;
@@ -14,7 +16,7 @@ const { nombre, texto, img, clase, claseblockquote } = Astro.props;
     style="grid-template-columns: repeat(auto-fit, minmax(min-content, 1fr)); padding:2rem"
 >
     <blockquote
-        class=`rounded bg-gray-50 pb-2 pt-6 px-6 shadow-lg xl:h-[250px] ${claseblockquote}`
+        class=`rounded bg-gray-50 pb-2 pt-6 px-6 shadow-lg xl:h-[280px] ${claseblockquote}`
     >
         <div class="flex items-center gap-4">
             <img
@@ -86,7 +88,6 @@ const { nombre, texto, img, clase, claseblockquote } = Astro.props;
         <p class="mt-4 text-gray-700 clipped-text" id="clipped-text">
             {texto}
         </p>
-        <button id="mi-boton" class="btn"></button>
     </blockquote>
 </div>
 
@@ -96,18 +97,5 @@ const { nombre, texto, img, clase, claseblockquote } = Astro.props;
         overflow: hidden;
         display: -webkit-box;
         -webkit-box-orient: vertical;
-    }
-
-    /* Estilo del botón "seguir leyendo" */
-    .btn {
-        display: none; /* Ocultar el botón por defecto */
-        background-color: #22c55e; /* Color de fondo */
-        color: white; /* Color del texto */
-        padding: 3px 10px; /* Espaciado interno */
-        border: none; /* Sin borde */
-        cursor: pointer; /* Cursor al pasar */
-        border-radius: 4px; /* Bordes redondeados */
-        margin-top: 10px; /* Margen superior */
-        font-size: smaller;
     }
 </style>
