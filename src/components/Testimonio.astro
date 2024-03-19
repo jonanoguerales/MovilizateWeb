@@ -4,15 +4,18 @@ interface Props {
     texto: string;
     img: string;
     clase: string;
+    claseblockquote: string;
 }
-const { nombre, texto, img, clase } = Astro.props;
+const { nombre, texto, img, clase, claseblockquote } = Astro.props;
 ---
 
 <div
     class="keen-slider__slide"
     style="grid-template-columns: repeat(auto-fit, minmax(min-content, 1fr)); padding:2rem"
 >
-    <blockquote class="rounded bg-gray-50 p-6 shadow-lg sm:p-8 h-64">
+    <blockquote
+        class=`rounded bg-gray-50 pb-2 pt-6 px-6 shadow-lg xl:h-[250px] ${claseblockquote}`
+    >
         <div class="flex items-center gap-4">
             <img
                 alt=""
@@ -100,10 +103,11 @@ const { nombre, texto, img, clase } = Astro.props;
         display: none; /* Ocultar el botón por defecto */
         background-color: #22c55e; /* Color de fondo */
         color: white; /* Color del texto */
-        padding: 10px 15px; /* Espaciado interno */
+        padding: 3px 10px; /* Espaciado interno */
         border: none; /* Sin borde */
         cursor: pointer; /* Cursor al pasar */
         border-radius: 4px; /* Bordes redondeados */
         margin-top: 10px; /* Margen superior */
+        font-size: smaller;
     }
 </style>

@@ -20,7 +20,7 @@ import Testimonio from "./Testimonio.astro";
         spacing: 16,
       },
       breakpoints: {
-        "(min-width: 1400px)": {
+        "(min-width: 1280px)": {
           slides: {
             origin: "auto",
             perView: 3,
@@ -31,6 +31,13 @@ import Testimonio from "./Testimonio.astro";
           slides: {
             origin: "auto",
             perView: 4,
+            spacing: 16,
+          },
+        },
+        "(min-width: 2100px)": {
+          slides: {
+            origin: "auto",
+            perView: 5,
             spacing: 16,
           },
         },
@@ -46,7 +53,7 @@ import Testimonio from "./Testimonio.astro";
 </script>
 <script>
   document.addEventListener("DOMContentLoaded", function () {
-    const blockquotes = document.getElementsByTagName("blockquote");
+    const blockquotes = document.getElementsByClassName("seguir"); // Solo elementos con la clase "seguir"
     let maxHeight = 100; // Altura máxima deseada
 
     for (let i = 0; i < blockquotes.length; i++) {
@@ -57,30 +64,23 @@ import Testimonio from "./Testimonio.astro";
         const paragraphHeight = paragraph.clientHeight;
 
         if (paragraphHeight > maxHeight) {
-          const button = blockquote.querySelector("button"); // Buscar un botón dentro del bloque de citas
-          if (button) {
-            button.style.display = "inline-block"; // Mostrar el botón si se encuentra
-            button.textContent = "Seguir leyendo";
+          const button = document.createElement("button"); // Crear un nuevo botón
+          button.textContent = "Seguir leyendo";
+          blockquote.appendChild(button); // Agregar el botón al bloque de citas
 
-            button.addEventListener("click", function () {
-              if (paragraph.style.maxHeight === "none") {
-                paragraph.style.maxHeight = maxHeight + "px";
-                this.textContent = "Seguir leyendo";
-              } else {
-                paragraph.style.maxHeight = "none";
-                this.textContent = "Leer menos";
-              }
-            });
+          button.addEventListener("click", function () {
+            if (paragraph.style.maxHeight === "none") {
+              paragraph.style.maxHeight = maxHeight + "px";
+              this.textContent = "Seguir leyendo";
+            } else {
+              paragraph.style.maxHeight = "none";
+              this.textContent = "Leer menos";
+            }
+          });
 
-            paragraph.style.maxHeight = maxHeight + "px";
-            blockquote.classList.remove("h-64"); // Eliminar la clase del blockquote
-            break; // Salir del bucle al encontrar un párrafo que cumple la condición
-          }
-        } else {
-          const button = blockquote.querySelector("button"); // Buscar un botón dentro del bloque de citas
-          if (button) {
-            button.style.display = "none"; // Ocultar el botón si el párrafo es más corto que la altura máxima
-          }
+          paragraph.style.maxHeight = maxHeight + "px";
+          blockquote.classList.remove("xl:h-[250px]"); // Eliminar la clase del blockquote
+          break; // Salir del bucle al encontrar un párrafo que cumple la condición
         }
       }
     }
@@ -98,28 +98,53 @@ import Testimonio from "./Testimonio.astro";
     <div class="mx-6 my-8 lg:col-span-3 lg:mx-0">
       <div id="keen-slider" class="keen-slider">
         <Testimonio
-          texto="Llevo menos de un mes con esta plataforma y ya noto cambios físicos y a nivel personal. Estoy muy contenta."
-          nombre="Julia Rodríguez"
+          texto="Ángel está siempre pendiente y animándote para que seguir avanzando. Los ejercicios se hacen en un rato y la nutrición se lleva muy bien. ¡Muchas gracias!"
+          nombre="Paula Mª Ruiz Florido"
           img="/imgTestimonios/T1.webp"
-          clase="object-contain"
-        />
-        <Testimonio
-          texto="Movilizate está muy pendiente con mi día a día, da mucha confianza y ganas en seguir adelante... gracias!"
-          nombre="Toñi Rodríguez"
-          img="/imgTestimonios/T2.webp"
-          clase="object-contain"
-        />
-        <Testimonio
-          texto="Ángel es muy atento y abierto para cualquier duda que surja. Recomendable."
-          nombre="Toñi Rodríguez"
-          img="/imgTestimonios/T3.webp"
           clase="object-cover"
+          claseblockquote=""
+        />
+        <Testimonio
+          texto="Empecé con Movilízate hace 3 meses porque quería bajar de peso y aumentar mi masa muscular. Después de una pequeña entrevista adaptó el plan nutricional y el plan de entrenamiento a mis necesidades y a mi tiempo. Llevaba entrenando muchos años pero sin un plan específico por lo que estaba estancada. Actualmente he conseguido ganar 2'5 kg de masa muscular y sentirme mucho mejor conmigo misma.Y esto no a hecho más que empezar. Si aún piensas que no puedes lograrlo no aplaces más el cambio de tu vida y compruebalo por ti mism@. Seguimos growing up.☆"
+          nombre="Sara A.Rodriguez"
+          img="/imgTestimonios/T2.webp"
+          clase="object-cover"
+          claseblockquote="seguir"
         />
         <Testimonio
           texto="Agradecida infinitamente con El Universo por ponerme en el camino a Movilízate 💚 siguiendo el plan de nutrición y de ejercicios personalizado que hacen con mucha dedicación, los resultados se vayan notando prácticamente desde el primer momento 💪un millón de gracias Ángel y a todo tu equipo por vuestra profesionalidad y por darle un reseteo a mi metabolismo, además que me gusta mucho cuidarme y moverme. Anímate y no olvides que la disciplina y el amor son la base de todo"
-          nombre="Toñi Rodríguez"
-          img="/imgTestimonios/T4.webp"
+          nombre="Lily's Dulce y Salado Internacional"
+          img="/imgTestimonios/T3.webp"
           clase="object-cover"
+          claseblockquote="seguir"
+        />
+        <Testimonio
+          texto="Llevo menos de un mes con esta plataforma y ya noto cambios físicos y a nivel personal. Estoy muy contenta."
+          nombre="Julia Rodríguez"
+          img="/imgTestimonios/T4.webp"
+          clase="object-contain"
+          claseblockquote=""
+        />
+        <Testimonio
+          texto="Ángel es muy atento y abierto para cualquier duda que surja. Recomendable."
+          nombre="Petya Panova"
+          img="/imgTestimonios/T5.webp"
+          clase="object-cover"
+          claseblockquote=""
+        />
+        <Testimonio
+          texto="Movilízate está muy pendiente con mi día a dia, da mucha confianza y ganas en seguir adelante.. gracias!"
+          nombre="Toñi Rodríguez"
+          img="/imgTestimonios/T6.webp"
+          clase="object-cover"
+          claseblockquote=""
+        />
+        <Testimonio
+          texto="Increíblee!!"
+          nombre="Stefano Tomas Fernandez"
+          img="/imgTestimonios/T7.webp"
+          clase="object-cover"
+          claseblockquote=""
         />
       </div>
     </div>
