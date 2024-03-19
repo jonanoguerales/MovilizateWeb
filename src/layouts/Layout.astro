@@ -1,7 +1,8 @@
 ---
-import Nav from '../components/Nav.astro';
-import Footer from '../components/Footer.astro';
-import '@fontsource-variable/onest';
+import Nav from "../components/Nav.astro";
+import Footer from "../components/Footer.astro";
+import "@fontsource-variable/onest";
+import BotonFlotanteArriba from "../components/BotonFlotanteArriba.astro";
 
 interface Props {
 	title: string;
@@ -22,9 +23,10 @@ const { description, title } = Astro.props;
 		<title>{title}</title>
 	</head>
 	<body>
-		<Nav/>
+		<Nav />
 		<slot />
-		<Footer/>
+		<BotonFlotanteArriba />
+		<Footer />
 	</body>
 </html>
 <style is:global>
@@ -32,7 +34,7 @@ const { description, title } = Astro.props;
 		/*color-scheme: light dark; /*Decir los colores al navegador que soportamos*/
 	}
 	html {
-		font-family: 'Onest Variable', sans-serif;
+		font-family: "Onest Variable", sans-serif;
 		background-color: white;
 	}
 </style>
