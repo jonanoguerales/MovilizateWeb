@@ -29,7 +29,6 @@
 </style>
 
 <script>
-    // script.ts
     document.addEventListener("DOMContentLoaded", () => {
         const btnScrollToTop = document.getElementById(
             "btnScrollToTop",
@@ -47,10 +46,12 @@
             }
         };
 
-        // Desplazar hacia arriba cuando se hace clic en el botón
+        // Desplazar hacia arriba cuando se hace clic en el botón con animación suave
         btnScrollToTop.addEventListener("click", () => {
-            document.body.scrollTop = 0; // Para Safari
-            document.documentElement.scrollTop = 0; // Para Chrome, Firefox, IE y Opera
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth", // Establece el comportamiento de desplazamiento como suave
+            });
         });
     });
 </script>
