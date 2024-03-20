@@ -1,4 +1,5 @@
 ---
+import Patrocinadores from "../components/Patrocinadores.astro";
 import Layout from "../layouts/Layout.astro";
 ---
 
@@ -7,9 +8,18 @@ import Layout from "../layouts/Layout.astro";
   description="Formulario de contacto y datos donde poder contactar con nosotros"
 >
   <section class="text-gray-600 body-font relative overflow-hidden">
+    <picture
+      class="absolute top-0 left-0 w-full h-full overflow-hidden lg:w-full"
+    >
+      <img
+        src="/fotoPrincipalContacto.webp"
+        alt="Imagen de fondo Contacto"
+        class="object-fill object-center h-full w-full opacity-35"
+      />
+    </picture>
     <div
       class="w-screen px-5 py-24 mx-auto flex items-center justify-center"
-      style="height: calc(100vh - 13rem)"
+      style="height: calc(100vh - 7rem)"
     >
       <div class="grid grid-cols-1 gap-4 lg:grid-cols-3 lg:gap-8">
         <div
@@ -129,4 +139,5 @@ import Layout from "../layouts/Layout.astro";
       </div>
     </div>
   </section>
+  <Patrocinadores />
 </Layout>

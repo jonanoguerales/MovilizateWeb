@@ -37,6 +37,27 @@ const { description, title } = Astro.props;
 		font-family: "Onest Variable", sans-serif;
 		background-color: white;
 	}
+	/* Estilos para cambiar el color del scrollbar */
+	/* Para navegadores basados en WebKit */
+	::-webkit-scrollbar {
+		width: 12px; /* Ancho del scrollbar */
+	}
+
+	/* Fondo del scrollbar */
+	::-webkit-scrollbar-track {
+		background-color: #f1f1f1; /* Color de fondo del scrollbar */
+	}
+
+	/* Color de la barra del scrollbar */
+	::-webkit-scrollbar-thumb {
+		background-color: #029cd6; /* Color de la barra del scrollbar */
+		border-radius: 6px; /* Radio de borde de la barra del scrollbar */
+	}
+
+	/* Cambiar el color de la barra del scrollbar cuando se desplaza */
+	::-webkit-scrollbar-thumb:hover {
+		background-color: #0056b3; /* Color de la barra del scrollbar al pasar el ratón sobre ella */
+	}
 
 	/*FadeInDown*/
 	@-webkit-keyframes fadeInDown {
