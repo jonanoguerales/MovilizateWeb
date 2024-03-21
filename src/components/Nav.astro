@@ -3,11 +3,11 @@
         <div
             class="flex h-20 md:h-28 w-full items-center justify-between md:px-10"
         >
-            <div class="flex items-center">
+            <div class="flex items-center" transition:persist>
                 <a href="/" class="flex-shrink-0 border-none">
                     <img
                         class="size-20 md:size-28"
-                        src="/logos/logo.webp"
+                        src="/logos/logo-black.webp"
                         alt="Your Company"
                     />
                 </a>
@@ -97,7 +97,7 @@
 </nav>
 
 <script>
-    document.addEventListener("DOMContentLoaded", () => {
+    document.addEventListener("astro:page-load", () => {
         const mobileMenuButton = document.getElementById("mobile-menu-button");
         const mobileMenu = document.getElementById("mobile-menu");
         const currentPage = window.location.pathname;

@@ -27,7 +27,7 @@ import Testimonio from "./Testimonio.astro";
             spacing: 16,
           },
         },
-        "(min-width: 1601px)": {
+        "(min-width: 1638px)": {
           slides: {
             origin: "auto",
             perView: 4,
@@ -51,8 +51,8 @@ import Testimonio from "./Testimonio.astro";
   keenSliderPrevious.addEventListener("click", () => keenSlider.prev());
   keenSliderNext.addEventListener("click", () => keenSlider.next());
 </script>
-<script is:inline>
-  document.addEventListener("DOMContentLoaded", function () {
+<script>
+  document.addEventListener("astro:page-load", function () {
     const blockquotes = document.getElementsByClassName("seguir"); // Solo elementos con la clase "seguir"
     let maxHeight = 100; // Altura máxima deseada
 

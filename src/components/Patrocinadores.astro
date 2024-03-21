@@ -17,7 +17,9 @@
                 </div>
             </div>
             <div class="glide__slide flex justify-center">
-                <div class="lg:h-40 lg:w-40 h-20 w-20 rounded-lg flex justify-center items-center">
+                <div
+                    class="lg:h-40 lg:w-40 h-20 w-20 rounded-lg flex justify-center items-center"
+                >
                     <img
                         alt="Patrocinador EFNE"
                         src="/imgPatrocinadores/EFNE.webp"
@@ -26,7 +28,9 @@
                 </div>
             </div>
             <div class="glide__slide flex justify-center">
-                <div class="lg:h-40 lg:w-60 h-16 w-32 rounded-lg flex justify-center items-center">
+                <div
+                    class="lg:h-40 lg:w-60 h-16 w-32 rounded-lg flex justify-center items-center"
+                >
                     <img
                         alt="Patrocinador Angela Diaz"
                         src="/imgPatrocinadores/AngelaDiaz.webp"
@@ -35,7 +39,9 @@
                 </div>
             </div>
             <div class="glide__slide flex justify-center">
-                <div class="lg:h-40 lg:w-60 h-16 w-32 rounded-lg flex justify-center items-center">
+                <div
+                    class="lg:h-40 lg:w-60 h-16 w-32 rounded-lg flex justify-center items-center"
+                >
                     <img
                         alt="Patrocinador HARBIZ"
                         src="/imgPatrocinadores/HARBIZ.webp"
@@ -47,8 +53,9 @@
     </div>
 </div>
 
-<script is:inline>
-    document.addEventListener("DOMContentLoaded", function () {
+<script>
+    document.addEventListener("astro:page-load", function () {
+        // @ts-ignore
         new Glide(".glide", {
             type: "carousel",
             startAt: 0,
