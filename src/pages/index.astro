@@ -3,6 +3,7 @@ import Layout from "../layouts/Layout.astro";
 import Testimonios from "../components/Testimonios.astro";
 import Patrocinadores from "../components/Patrocinadores.astro";
 import Metodos from "../components/Metodos.astro";
+import Cambios from "../components/Cambios.astro";
 ---
 
 <Layout
@@ -26,6 +27,7 @@ import Metodos from "../components/Metodos.astro";
 					media="(min-width: 768px)"
 				/>
 				<img
+					loading="lazy"
 					src="/fotoPrincipalIniciomovil2.webp"
 					alt="Imagen de fondo pagina principal"
 					class="object-fill object-center h-full w-full"
@@ -80,6 +82,7 @@ import Metodos from "../components/Metodos.astro";
 			sizeespacio="ml-2"
 		/>
 		<Testimonios />
+		<Cambios />
 		<Patrocinadores astro:page-load />
 	</main>
 </Layout>

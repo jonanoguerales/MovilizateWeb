@@ -1,0 +1,83 @@
+<astro>
+    <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
+</astro>
+<section class="bg-white overflow-hidden">
+    <div class="mx-auto w-full px-4 pb-12 sm:px-16 lg:pb-16 xl:pb-24">
+        <div class="items-end justify-between md:flex md:pe-6 lg:pe-16">
+            <h2
+                class="text-3xl font-bold tracking-tight text-gray-900 sm:text-5xl"
+            >
+                Las transformaciones de nuestros clientes
+            </h2>
+        </div>
+        <div class="glide1 overflow-hidden pt-16">
+            <div class="glide__track" data-glide-el="track">
+                <div class="glide__slides flex">
+                    <div class="glide__slide flex justify-center">
+                        <div class="shadow-lg max-w-80">
+                            <img
+                                loading="lazy"
+                                alt=""
+                                src="/imgCambios/Sara.webp"
+                                class="aspect-auto h-full w-full rounded-xl shadow-lg object-contain"
+                            />
+                        </div>
+                    </div>
+                    <div class="glide__slide flex justify-center">
+                        <div class="shadow-lg max-w-80">
+                            <img
+                                loading="lazy"
+                                alt=""
+                                src="/imgCambios/Sara.webp"
+                                class="aspect-auto h-full w-full rounded-xl shadow-lg object-contain"
+                            />
+                        </div>
+                    </div>
+                    <div class="glide__slide flex justify-center">
+                        <div class="shadow-lg max-w-80">
+                            <img
+                                loading="lazy"
+                                alt=""
+                                src="/imgCambios/Sara.webp"
+                                class="aspect-auto h-full w-full rounded-xl shadow-lg object-contain"
+                            />
+                        </div>
+                    </div>
+                    <div class="glide__slide flex justify-center">
+                        <div class="shadow-lg max-w-80">
+                            <img
+                                loading="lazy"
+                                alt=""
+                                src="/imgCambios/Sara.webp"
+                                class="aspect-auto h-full w-full rounded-xl shadow-lg object-contain"
+                            />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+    document.addEventListener("astro:page-load", function () {
+        // @ts-ignore
+        new Glide(".glide1", {
+            type: "carousel",
+            startAt: 0,
+            perView: 1,
+            gap: 1,
+            autoplay: 4000, // Cambiar a la velocidad de movimiento deseada en milisegundos (en este caso, cada 2 segundos)
+            hoverpause: true, // Pausar el carrusel cuando se pasa el cursor sobre él
+            animationDuration: 2000, // Duración de la animación en milisegundos (en este caso, 0.5 segundos)
+            breakpoints: {
+                1024: {
+                    perView: 1,
+                },
+                600: {
+                    perView: 1,
+                },
+            },
+        }).mount();
+    });
+</script>
