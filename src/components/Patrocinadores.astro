@@ -1,3 +1,11 @@
+---
+import { Image } from "astro:assets";
+import TATZAGENCY from "../assets/imgPatrocinadores/TATZAGENCY.webp";
+import EFNE from "../assets/imgPatrocinadores/EFNE.webp";
+import AngelaDiaz from "../assets/imgPatrocinadores/AngelaDiaz.webp";
+import HARBIZ from "../assets/imgPatrocinadores/HARBIZ.webp";
+---
+
 <astro>
     <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
 </astro>
@@ -9,9 +17,9 @@
                 <div
                     class="lg:h-40 lg:w-40 h-20 w-20 rounded-lg flex justify-center items-center"
                 >
-                    <img
+                    <Image
                         alt="Patrocinador TATZ AGENCY"
-                        src="/imgPatrocinadores/TATZAGENCY.webp"
+                        src={TATZAGENCY}
                         class="object-cover h-full w-full"
                     />
                 </div>
@@ -20,9 +28,9 @@
                 <div
                     class="lg:h-40 lg:w-40 h-20 w-20 rounded-lg flex justify-center items-center"
                 >
-                    <img
+                    <Image
                         alt="Patrocinador EFNE"
-                        src="/imgPatrocinadores/EFNE.webp"
+                        src={EFNE}
                         class="object-cover h-full w-full"
                     />
                 </div>
@@ -31,9 +39,9 @@
                 <div
                     class="lg:h-40 lg:w-60 h-16 w-32 rounded-lg flex justify-center items-center"
                 >
-                    <img
+                    <Image
                         alt="Patrocinador Angela Diaz"
-                        src="/imgPatrocinadores/AngelaDiaz.webp"
+                        src={AngelaDiaz}
                         class="object-cover h-full w-full"
                     />
                 </div>
@@ -42,9 +50,9 @@
                 <div
                     class="lg:h-40 lg:w-60 h-16 w-32 rounded-lg flex justify-center items-center"
                 >
-                    <img
+                    <Image
                         alt="Patrocinador HARBIZ"
-                        src="/imgPatrocinadores/HARBIZ.webp"
+                        src={HARBIZ}
                         class="object-cover h-full w-full"
                     />
                 </div>

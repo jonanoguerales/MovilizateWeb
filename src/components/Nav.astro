@@ -1,3 +1,8 @@
+---
+import { Image } from "astro:assets";
+import logo from "../assets/logos/logo-black.webp";
+---
+
 <nav>
     <div class="px-8 sm:px-6 lg:px-16 overflow-hidden">
         <div
@@ -5,9 +10,9 @@
         >
             <div class="flex items-center" transition:persist>
                 <a href="/" class="flex-shrink-0 border-none">
-                    <img
+                    <Image
                         class="size-20 md:size-28"
-                        src="/logos/logo-black.webp"
+                        src={logo}
                         alt="Your Company"
                     />
                 </a>

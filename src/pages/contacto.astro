@@ -1,6 +1,9 @@
 ---
+import { Image } from "astro:assets";
 import FAQ from "../components/FAQ.astro";
 import Layout from "../layouts/Layout.astro";
+import fotoPrincipalContacto from "../assets/fotoPrincipalContacto.webp";
+import fotoPrincipalContactoMovil from "../assets/fotoPrincipalContactoMovil.webp";
 ---
 
 <Layout
@@ -8,16 +11,18 @@ import Layout from "../layouts/Layout.astro";
   description="Formulario de contacto y datos donde poder contactar con nosotros"
 >
   <section class="text-gray-600 body-font relative overflow-hidden">
-    <picture
-      class="absolute top-0 left-0 w-full h-full overflow-hidden lg:w-full"
-    >
-      <source srcset="/fotoPrincipalContacto.webp" media="(min-width: 768px)" />
-      <img
-        src="/fotoPrincipalContactoMovil.webp"
+    <div class="absolute top-0 left-0 w-full h-full overflow-hidden lg:w-full">
+      <Image
+        src={fotoPrincipalContactoMovil}
+        alt="Imagen de fondo Contacto"
+        class="object-fill object-center h-full w-full opacity-35 md:hidden"
+      />
+      <Image
+        src={fotoPrincipalContacto}
         alt="Imagen de fondo Contacto"
         class="object-fill object-center h-full w-full opacity-35"
       />
-    </picture>
+    </div>
     <div
       class="w-screen px-5 py-24 mx-auto flex items-center justify-center"
       style="height: calc(100vh - 7rem)"

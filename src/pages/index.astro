@@ -4,6 +4,10 @@ import Testimonios from "../components/Testimonios.astro";
 import Patrocinadores from "../components/Patrocinadores.astro";
 import Metodos from "../components/Metodos.astro";
 import Cambios from "../components/Cambios.astro";
+import { Image } from "astro:assets";
+import fotoperfil from "../assets/fotoPrincipalInicio.webp";
+import fotoperfilmax from "../assets/fotoPrincipalIniciomax.webp";
+import fotoperfilmovil from "../assets/fotoPrincipalIniciomovil2.webp";
 ---
 
 <Layout
@@ -15,23 +19,25 @@ import Cambios from "../components/Cambios.astro";
 			class="relative flex items-center overflow-hidden"
 			style="height: calc(100vh - 7rem)"
 		>
-			<picture
+			<div
 				class="absolute top-0 left-0 w-full h-full overflow-hidden lg:w-full"
 			>
-				<source
-					srcset="/fotoPrincipalInicio.webp"
-					media="(min-width: 1024px)"
+				<Image
+					src={fotoperfilmovil}
+					alt="Imagen de fondo pagina principal"
+					class="object-fill object-center h-full w-full md:hidden"
 				/>
-				<source
-					srcset="/fotoPrincipalIniciomax.webp"
-					media="(min-width: 768px)"
+				<Image
+					src={fotoperfilmax}
+					alt="Imagen de fondo pagina principal"
+					class="object-fill object-center h-full w-full lg:hidden"
 				/>
-				<img
-					src="/fotoPrincipalIniciomovil2.webp"
+				<Image
+					src={fotoperfil}
 					alt="Imagen de fondo pagina principal"
 					class="object-fill object-center h-full w-full"
 				/>
-			</picture>
+			</div>
 			<div
 				class="absolute max-md:inset-0 max-md:bg-black max-md:opacity-50"
 			>
