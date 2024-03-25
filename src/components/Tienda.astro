@@ -3,48 +3,6 @@ import { Image } from "astro:assets";
 import efne from "../assets/imgTienda/Efne.webp";
 ---
 
-<script>
-    // Importar las rutas de las imágenes
-    import efneMetadata from "../assets/imgTienda/Efne.webp";
-    import efne2Metadata from "../assets/imgTienda/Efne2.webp";
-
-    // Obtener las rutas de las imágenes de los metadatos
-    const efne: string = efneMetadata.src as string;
-    const efne2: string = efne2Metadata.src as string;
-
-    document.addEventListener("DOMContentLoaded", () => {
-        const imagen = document.getElementById("imagen") as HTMLImageElement;
-        const botonAnterior = document.getElementById(
-            "anterior",
-        ) as HTMLButtonElement;
-        const botonSiguiente = document.getElementById(
-            "siguiente",
-        ) as HTMLButtonElement;
-
-        let imagenActual = 0;
-
-        // Array con las rutas de las imágenes
-        const imagenes: string[] = [efne, efne2];
-
-        // Función para cambiar la imagen
-        function cambiarImagen(direccion: number) {
-            imagen.style.opacity = "0"; // Hacer que la imagen se desvanezca
-            setTimeout(() => {
-                imagenActual = (imagenActual + direccion) % imagenes.length; // Cambiar entre las imágenes del array
-                if (imagenActual < 0) {
-                    imagenActual = imagenes.length - 1;
-                }
-                imagen.src = imagenes[imagenActual]; // Cambiar la ruta de la imagen
-                imagen.style.opacity = "1"; // Hacer que la nueva imagen aparezca gradualmente
-            }, 500); // Esperar 0.5 segundos para la transición
-        }
-
-        // Event listeners para los botones
-        botonAnterior.addEventListener("click", () => cambiarImagen(-1)); // Cambiar hacia la imagen anterior
-        botonSiguiente.addEventListener("click", () => cambiarImagen(1)); // Cambiar hacia la siguiente imagen
-    });
-</script>
-
 <article class="flex bg-white justify-center">
     <div
         class="flex bg-white transition hover:shadow-xl pt-20 sm:px-10 pb-10 max-w-5xl"
@@ -61,14 +19,11 @@ import efne from "../assets/imgTienda/Efne.webp";
         </div>
 
         <div class="flex max-h-72 max-sm:h-full mr-6">
-            <button id="anterior">&lt;</button>
             <Image
-                id="imagen"
                 alt="Imagen producto"
                 src={efne}
                 class="aspect-square h-full w-full object-contain imagen1"
             />
-            <button id="siguiente">&gt;</button>
         </div>
 
         <div class="flex flex-1 flex-col justify-between">
@@ -76,12 +31,19 @@ import efne from "../assets/imgTienda/Efne.webp";
                 class="sm:h-[250px] flex flex-col justify-center border-s border-gray-900/10 p-4 sm:border-l-transparent sm:p-6"
             >
                 <h3 class="font-bold uppercase text-gray-900">10% DESCUENTO</h3>
-                <p class="mt-2 line-clamp-3 text-sm/relaxed text-gray-700">
-                    Suplementación con grado de evidencia A y B.
+                <p
+                    class="mt-2 line-clamp-3 text-sm/relaxed text-gray-700 max-1sm:flex max-1sm:flex-col"
+                >
+                    Suplementación con grado de evidencia<span class="1sm:px-1"
+                        >A y B.</span
+                    >
                 </p>
-                <p class="mt-2 line-clamp-3 text-sm/relaxed text-gray-700">
-                    Nutrición deportiva,vitaminas y minerales y alimentación
-                    saludable.
+                <p
+                    class="mt-2 line-clamp-3 text-sm/relaxed text-gray-700 max-3sm:flex max-3sm:flex-col"
+                >
+                    Nutrición deportiva,<span class="3sm:px-1"
+                        >vitaminas y minerales,</span
+                    >alimentación saludable.
                 </p>
                 <p
                     class="mt-10 line-clamp-3 text-sm/relaxed text-gray-700 flex justify-end"

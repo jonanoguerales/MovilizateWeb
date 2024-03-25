@@ -14,6 +14,7 @@ export default {
 			  '7xl':'2100px',
 			  '1sm':'550px',
 			  '2sm':'722px',
+			  '3sm':'572px',
 			},
 		  },
 	},
