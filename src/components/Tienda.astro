@@ -14,28 +14,29 @@ import efne1 from "../assets/imgPatrocinadores/EFNE.webp";
             />
         </div>
         <div
-            class="flex bg-white transition hover:shadow-xl sm:px-10 pb-10 max-w-5xl"
+            class="flex bg-white transition hover:shadow-xl hover:rounded-lg sm:px-10 pb-10 max-w-[900px]"
         >
-            <div class="rotate-180 p-2 [writing-mode:_vertical-lr]">
-                <time
-                    datetime="2022-10-10"
-                    class="flex items-center justify-between gap-4 text-xs font-bold uppercase text-gray-900"
-                >
-                    <span>Suplementación</span>
-                    <span class="w-px flex-1 bg-gray-900/10"></span>
-                    <span>10%</span>
-                </time>
-            </div>
+            <div class="flex w-2/5">
+                <div class="rotate-180 p-2 [writing-mode:_vertical-lr]">
+                    <time
+                        datetime="2022-10-10"
+                        class="flex items-center justify-between gap-4 text-xs font-bold uppercase text-gray-900"
+                    >
+                        <span>Suplementación</span>
+                        <span class="w-px flex-1 bg-gray-900/10"></span>
+                        <span>10%</span>
+                    </time>
+                </div>
 
-            <div class="flex max-h-72 max-sm:h-full mr-6">
-                <Image
-                    alt="Imagen producto"
-                    src={efne}
-                    class="aspect-square h-full w-full object-contain imagen1"
-                />
+                <div class="flex max-h-72 max-sm:h-full mr-6">
+                    <Image
+                        alt="Imagen producto"
+                        src={efne}
+                        class="aspect-square h-full w-full object-contain imagen1"
+                    />
+                </div>
             </div>
-
-            <div class="flex flex-1 flex-col justify-between">
+            <div class="flex flex-col justify-between w-3/5">
                 <div
                     class="sm:h-[250px] flex flex-col justify-center border-s border-gray-900/10 p-4 sm:border-l-transparent sm:p-6"
                 >
@@ -76,8 +77,3 @@ import efne1 from "../assets/imgPatrocinadores/EFNE.webp";
         </div>
     </div>
 </article>
-<style>
-    .imagen1 {
-        transition: opacity 0.5s ease-in-out; /* Transición de opacidad */
-    }
-</style>
