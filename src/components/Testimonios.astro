@@ -12,50 +12,47 @@ import IconoGoogle from "./icons/IconoGoogle.astro";
 
 <script type="module">
   import KeenSlider from "https://cdn.jsdelivr.net/npm/keen-slider@6.8.6/+esm";
-
-  const keenSlider = new KeenSlider(
-    "#keen-slider",
-    {
-      loop: true,
-      slides: {
-        origin: "center",
-        perView: 1,
-        spacing: 16,
-      },
-      breakpoints: {
-        "(min-width: 1281px)": {
-          slides: {
-            origin: "auto",
-            perView: 3,
-            spacing: 16,
-          },
-        },
-        "(min-width: 1638px)": {
-          slides: {
-            origin: "auto",
-            perView: 4,
-            spacing: 16,
-          },
-        },
-        "(min-width: 2100px)": {
-          slides: {
-            origin: "auto",
-            perView: 5,
-            spacing: 16,
-          },
-        },
-      },
-    },
-    [],
-  );
-  const keenSliderPrevious = document.getElementById("keen-slider-previous");
-  const keenSliderNext = document.getElementById("keen-slider-next");
-
-  keenSliderPrevious.addEventListener("click", () => keenSlider.prev());
-  keenSliderNext.addEventListener("click", () => keenSlider.next());
-</script>
-<script>
   document.addEventListener("astro:page-load", function () {
+    const keenSlider = new KeenSlider(
+      "#keen-slider",
+      {
+        loop: true,
+        slides: {
+          origin: "center",
+          perView: 1,
+          spacing: 16,
+        },
+        breakpoints: {
+          "(min-width: 1281px)": {
+            slides: {
+              origin: "auto",
+              perView: 3,
+              spacing: 16,
+            },
+          },
+          "(min-width: 1638px)": {
+            slides: {
+              origin: "auto",
+              perView: 4,
+              spacing: 16,
+            },
+          },
+          "(min-width: 2100px)": {
+            slides: {
+              origin: "auto",
+              perView: 5,
+              spacing: 16,
+            },
+          },
+        },
+      },
+      [],
+    );
+    const keenSliderPrevious = document.getElementById("keen-slider-previous");
+    const keenSliderNext = document.getElementById("keen-slider-next");
+
+    keenSliderPrevious?.addEventListener("click", () => keenSlider.prev());
+    keenSliderNext?.addEventListener("click", () => keenSlider.next());
     const blockquotes = document.getElementsByClassName("seguir"); // Solo elementos con la clase "seguir"
     let maxHeight = 100; // Altura máxima deseada
 
