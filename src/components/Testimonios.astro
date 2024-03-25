@@ -7,6 +7,7 @@ import T4 from "../assets/imgTestimonios/T4.webp";
 import T5 from "../assets/imgTestimonios/T5.webp";
 import T6 from "../assets/imgTestimonios/T6.webp";
 import T7 from "../assets/imgTestimonios/T7.webp";
+import IconoGoogle from "./icons/IconoGoogle.astro";
 ---
 
 <script type="module">
@@ -106,12 +107,23 @@ import T7 from "../assets/imgTestimonios/T7.webp";
 
 <section class="bg-white overflow-hidden">
   <div class="mx-auto w-full px-4 py-12 sm:px-16 lg:py-16 xl:py-24">
-    <div class="items-end justify-between md:flex md:pe-6 lg:pe-16">
-      <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-5xl">
-        Lea reseñas confiables de nuestros clientes
+    <div class="md:flex md:items-center md:justify-between px-8 gap-4">
+      <h2
+        class="text-3xl font-bold tracking-tight text-gray-900 md:text-5xl max-md:flex max-1sm:flex-col max-md:justify-center max-1sm:items-center"
+      >
+        Testimonios<span class="px-1">de</span><span>nuestros clientes</span>
       </h2>
-    </div>
 
+      <a
+        href="https://www.google.com/search?sca_esv=fa651450fe8a2ab2&hl=es-ES&tbm=lcl&sxsrf=ACQVn08PfFKg4KNpxluKswQlSvK58J_CEA:1710836425487&q=Movil%C3%ADzate+%7C+Cambio+F%C3%ADsico+Online+Rese%C3%B1as&rflfq=1&num=20&stick=H4sIAAAAAAAAAONgkxIxNDYxNzE2MrI0sDQxNzY2NzU2MdnAyPiKUcc3vywz5_DaqsSSVIUaBefE3KTMfAW3w2uLM5PzFfzzcjLzUhWCUotTD29MLF7ESpJyAFnC1gV5AAAA&rldimm=13474322909473375344&sa=X&ved=2ahUKEwjYtqOr8v-EAxUjVKQEHal2DVsQ9fQKegQINhAF&biw=2133&bih=1021&dpr=0.9#lkt=LocalPoiReviews"
+        target="_blank"
+        class="max-md:w-full justify-center mt-6 inline-flex shrink-0 items-center float-end gap-2 rounded-full border border-[#22c55e] px-5 py-3 text-[#22c55e] transition hover:bg-[#22c55e] hover:text-white md:mt-0"
+      >
+        <span class="font-medium"> Reseñas </span>
+
+        <IconoGoogle class="size-10" />
+      </a>
+    </div>
     <div class="mx-6 my-8 lg:col-span-3 lg:mx-0">
       <div id="keen-slider" class="keen-slider">
         <Testimonio
@@ -207,4 +219,13 @@ import T7 from "../assets/imgTestimonios/T7.webp";
       </button>
     </div>
   </div>
+  <style>
+    .button {
+      background-color: #22c55e;
+    }
+
+    .button:hover {
+      background-color: #1a9148;
+    }
+  </style>
 </section>
