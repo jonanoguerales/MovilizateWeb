@@ -1,65 +1,77 @@
 ---
 import { Image } from "astro:assets";
 import efne from "../assets/imgTienda/Efne.webp";
+import efne1 from "../assets/imgPatrocinadores/EFNE.webp";
 ---
 
 <article class="flex bg-white justify-center">
-    <div
-        class="flex bg-white transition hover:shadow-xl pt-20 sm:px-10 pb-10 max-w-5xl"
-    >
-        <div class="rotate-180 p-2 [writing-mode:_vertical-lr]">
-            <time
-                datetime="2022-10-10"
-                class="flex items-center justify-between gap-4 text-xs font-bold uppercase text-gray-900"
-            >
-                <span>Suplementación</span>
-                <span class="w-px flex-1 bg-gray-900/10"></span>
-                <span>10%</span>
-            </time>
-        </div>
-
-        <div class="flex max-h-72 max-sm:h-full mr-6">
+    <div class="pt-20">
+        <div class="h-28 w-28 pb-5 pl-10">
             <Image
                 alt="Imagen producto"
-                src={efne}
+                src={efne1}
                 class="aspect-square h-full w-full object-contain imagen1"
             />
         </div>
-
-        <div class="flex flex-1 flex-col justify-between">
-            <div
-                class="sm:h-[250px] flex flex-col justify-center border-s border-gray-900/10 p-4 sm:border-l-transparent sm:p-6"
-            >
-                <h3 class="font-bold uppercase text-gray-900">10% DESCUENTO</h3>
-                <p
-                    class="mt-2 line-clamp-3 text-sm/relaxed text-gray-700 max-1sm:flex max-1sm:flex-col"
+        <div
+            class="flex bg-white transition hover:shadow-xl sm:px-10 pb-10 max-w-5xl"
+        >
+            <div class="rotate-180 p-2 [writing-mode:_vertical-lr]">
+                <time
+                    datetime="2022-10-10"
+                    class="flex items-center justify-between gap-4 text-xs font-bold uppercase text-gray-900"
                 >
-                    Suplementación con grado de evidencia<span class="1sm:px-1"
-                        >A y B.</span
-                    >
-                </p>
-                <p
-                    class="mt-2 line-clamp-3 text-sm/relaxed text-gray-700 max-3sm:flex max-3sm:flex-col"
-                >
-                    Nutrición deportiva,<span class="3sm:px-1"
-                        >vitaminas y minerales,</span
-                    >alimentación saludable.
-                </p>
-                <p
-                    class="mt-10 line-clamp-3 text-sm/relaxed text-gray-700 flex justify-end"
-                >
-                    <span class="font-semibold">CÓDIGO:</span>"MOVILÍZATE"
-                </p>
+                    <span>Suplementación</span>
+                    <span class="w-px flex-1 bg-gray-900/10"></span>
+                    <span>10%</span>
+                </time>
             </div>
 
-            <div class="sm:flex sm:items-end sm:justify-end px-6">
-                <a
-                    href="https://efne.es/"
-                    target="_blank"
-                    class="block bg-[#029cd6] px-5 py-3 text-center text-xs font-bold uppercase text-white transition hover:bg-[#0056b3] rounded-lg"
+            <div class="flex max-h-72 max-sm:h-full mr-6">
+                <Image
+                    alt="Imagen producto"
+                    src={efne}
+                    class="aspect-square h-full w-full object-contain imagen1"
+                />
+            </div>
+
+            <div class="flex flex-1 flex-col justify-between">
+                <div
+                    class="sm:h-[250px] flex flex-col justify-center border-s border-gray-900/10 p-4 sm:border-l-transparent sm:p-6"
                 >
-                    Comprar
-                </a>
+                    <h3 class="font-bold uppercase text-gray-900">
+                        10% DESCUENTO
+                    </h3>
+                    <p
+                        class="mt-2 line-clamp-3 text-sm/relaxed text-gray-700 max-1sm:flex max-1sm:flex-col"
+                    >
+                        Suplementación con grado de evidencia<span
+                            class="1sm:px-1">A y B.</span
+                        >
+                    </p>
+                    <p
+                        class="mt-2 line-clamp-3 text-sm/relaxed text-gray-700 max-3sm:flex max-3sm:flex-col"
+                    >
+                        Nutrición deportiva,<span class="3sm:px-1"
+                            >vitaminas y minerales,</span
+                        >alimentación saludable.
+                    </p>
+                    <p
+                        class="mt-10 line-clamp-3 text-sm/relaxed text-gray-700 flex justify-end"
+                    >
+                        <span class="font-semibold">CÓDIGO:</span>"MOVILÍZATE"
+                    </p>
+                </div>
+
+                <div class="sm:flex sm:items-end sm:justify-end px-6">
+                    <a
+                        href="https://efne.es/"
+                        target="_blank"
+                        class="block bg-[#029cd6] px-5 py-3 text-center text-xs font-bold uppercase text-white transition hover:bg-[#0056b3] rounded-lg"
+                    >
+                        Comprar
+                    </a>
+                </div>
             </div>
         </div>
     </div>
