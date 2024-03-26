@@ -1,5 +1,6 @@
 ---
 import IconoCheck from "./icons/IconoCheck.astro";
+import video from "../assets/PlanHIFEMFIT.mp4";
 ---
 
 <div class="flex justify-center py-12">
@@ -33,14 +34,17 @@ import IconoCheck from "./icons/IconoCheck.astro";
         </div>
         <div class="lg:w-1/2">
             <a href="#!">
-                <iframe
+                <video
+                    id="myVideo"
+                    controls
+                    loop
                     width="320"
                     height="240"
-                    src="https://www.youtube.com/embed/FrZoF3OJk90"
-                    class="w-full rounded-lg"
-                    allowfullscreen
+                    class="rounded-lg w-[320px] h-[240px]"
                 >
-                </iframe>
+                    <source src={video} type="video/mp4" />
+                    Tu navegador no soporta la etiqueta de video.
+                </video>
             </a>
         </div>
     </div>
