@@ -4,7 +4,6 @@ import imgSobrenosotros1 from "../assets/imgSobrenosotros/1.webp";
 import imgSobrenosotros2 from "../assets/imgSobrenosotros/2.webp";
 import imgSobrenosotros3 from "../assets/imgSobrenosotros/3.webp";
 import imgSobrenosotros4 from "../assets/imgSobrenosotros/4.webp";
-import { fade } from "astro:transitions";
 ---
 
 <section class="text-gray-600 body-font overflow-hidden">
@@ -14,12 +13,12 @@ import { fade } from "astro:transitions";
     <div
       class="flex flex-wrap -mx-4 mt-auto mb-auto lg:w-[60%] xl:w-1/2 sm:w-1/2 content-start sm:pr-10"
     >
-      <div
-        class="w-full sm:p-4 px-4 mb-6"
-        transition:animate={fade({ duration: "0.4s" })}
-      >
+      <div class="w-full sm:p-4 px-4 mb-6">
         <h1
           class="text-3xl md:text-4xl lg:text-4xl xl:text-6xl font-bold mb-4 text-gray-900"
+          data-aos="fade-right"
+          data-aos-easing="linear"
+          data-aos-duration="800"
         >
           <span
             style="
@@ -31,7 +30,12 @@ background-position: right bottom 5%;
             >Planes
           </span> de entrenamiento y Nutrición
         </h1>
-        <div class="text-sm md:text-lg 2xl:text-2xl relative">
+        <div
+          class="text-sm md:text-lg 2xl:text-2xl relative"
+          data-aos="fade-up"
+          data-aos-easing="linear"
+          data-aos-duration="1000"
+        >
           Desde
           <span
             class="font-bold"
@@ -107,7 +111,10 @@ background-position: right bottom 5%;
       </div>
     </div>
     <div
-      class="xl:w-[40%] lg:w-[40%] sm:w-1/2 w-full rounded-lg mt-6 sm:mt-0 animated fadeInRight"
+      class="xl:w-[40%] lg:w-[40%] sm:w-1/2 w-full rounded-lg mt-6 sm:mt-0"
+      data-aos="fade-left"
+      data-aos-easing="linear"
+      data-aos-duration="800"
     >
       <Image
         class="object-cover object-center w-full h-[300px] sm:h-[250px] md:h-[350px] lg:h-full"
@@ -125,6 +132,8 @@ background-position: right bottom 5%;
     <div
       class="xl:w-[40%] lg:w-[40%] sm:w-1/3 w-full rounded-lg mt-6 sm:mt-0"
       data-aos="flip-left"
+      data-aos-easing="linear"
+      data-aos-duration="800"
     >
       <Image
         class="object-cover object-center w-full h-[400px] lg:h-[700px]"
@@ -219,7 +228,8 @@ background-position: right bottom 5%;
     >
       <div class="w-full sm:p-4 px-4 mb-6">
         <h1
-          class="text-3xl md:text-4xl lg:text-4xl xl:text-6xl font-bold mb-4 text-gray-900 show-on-scrollLeft"
+          class="text-3xl md:text-4xl lg:text-4xl xl:text-6xl font-bold mb-4 text-gray-900"
+          data-aos="fade-up-right"
         >
           <span
             style="
@@ -231,7 +241,7 @@ background-position: right bottom 5%;
             >Trabaja
           </span> con tu Coach
         </h1>
-        <div class="text-sm md:text-lg 2xl:text-2xl show-on-scrollRight">
+        <div class="text-sm md:text-lg 2xl:text-2xl" data-aos="fade-left">
           Seguro que durante el camino hacia tu objetivo tienes muchas preguntas
           pero eso no será un problema, ya que tu coach será tu
           <span
@@ -293,7 +303,10 @@ background-position: right bottom 5%;
       </div>
     </div>
     <div
-      class="xl:w-[40%] lg:w-[40%] sm:w-1/2 w-full rounded-lg mt-6 sm:mt-0 show-on-scrollInDown"
+      class="xl:w-[40%] lg:w-[40%] sm:w-1/2 w-full rounded-lg mt-6 sm:mt-0"
+      data-aos="flip-down"
+      data-aos-easing="linear"
+      data-aos-duration="800"
     >
       <Image
         class="object-cover object-center w-full h-[380px] lg:h-full"
@@ -309,7 +322,10 @@ background-position: right bottom 5%;
     class="container px-5 py-24 mx-auto flex flex-wrap max-sm:flex-col-reverse justify-center items-center"
   >
     <div
-      class="xl:w-[40%] lg:w-[40%] sm:w-1/2 w-full rounded-lg mt-6 sm:mt-0 show-on-scrollLeft"
+      class="xl:w-[40%] lg:w-[40%] sm:w-1/2 w-full rounded-lg mt-6 sm:mt-0"
+      data-aos="zoom-in"
+      data-aos-easing="linear"
+      data-aos-duration="800"
     >
       <Image
         class="object-cover object-center h-[240px] sm:h-full w-[300] lg:w-full"
@@ -323,7 +339,8 @@ background-position: right bottom 5%;
     >
       <div class="w-full sm:p-4 px-4 mb-6">
         <h1
-          class="text-3xl md:text-4xl lg:text-4xl xl:text-6xl font-bold mb-4 text-gray-900 show-on-scrollInUp"
+          class="text-3xl md:text-4xl lg:text-4xl xl:text-6xl font-bold mb-4 text-gray-900"
+          data-aos="fade-up-left"
         >
           <span
             style="
@@ -335,7 +352,7 @@ background-position: right bottom 5%;
             >Utiliza
           </span>nuestra App
         </h1>
-        <div class="text-sm md:text-lg 2xl:text-2xl show-on-scrollInDown">
+        <div class="text-sm md:text-lg 2xl:text-2xl" data-aos="fade-right">
           Desde nuestra App "Harbiz" tienes acceso a toda tu
           <span
             class="font-bold"
@@ -383,44 +400,30 @@ background-position: right bottom 5%;
     </div>
   </div>
 </section>
+<section class="bg-white">
+  <div
+    class="mx-auto max-w-screen-xl px-4 pb-32 lg:flex lg:h-[600px] lg:items-center"
+    data-aos="fade-up"
+    data-aos-easing="linear"
+    data-aos-duration="1500"
+  >
+    <div class="mx-auto max-w-xl text-center">
+      <h1 class="text-3xl font-extrabold sm:text-5xl">Nuestro Equipo</h1>
+      <h1 class="text-3xl font-extrabold sm:text-5xl">
+        <strong class="font-extrabold text-red-700 sm:block">
+          Lo mejor de nosotros
+        </strong>
+      </h1>
 
-<style>
-  /* al hacer scroll haga la animacion */
-  .show-on-scrollInDown {
-    view-timeline-name: --image;
-    view-timeline-axis: block;
-    animation-timeline: --image;
-    animation-name: fadeInDown;
-    animation-range: entry 20% cover 35%;
-    animation-fill-mode: both;
-  }
-  .show-on-scrollInUp {
-    view-timeline-name: --image;
-    view-timeline-axis: block;
-    animation-timeline: --image;
-    animation-name: fadeInUp;
-    animation-range: entry 20% cover 35%;
-    animation-fill-mode: both;
-  }
-  .show-on-scrollLeft {
-    view-timeline-name: --image;
-    view-timeline-axis: block;
-    animation-timeline: --image;
-    animation-name: fadeInLeft;
-    animation-range: entry 20% cover 35%;
-    -webkit-animation-fill-mode: both;
-    animation-fill-mode: both;
-  }
-  .show-on-scrollRight {
-    view-timeline-name: --image;
-    view-timeline-axis: block;
-    animation-timeline: --image;
-    animation-name: fadeInRight;
-    animation-range: entry 20% cover 35%;
-    -webkit-animation-fill-mode: both;
-    animation-fill-mode: both;
-  }
-</style>
+      <p class="mt-4 sm:text-xl/relaxed">
+        Todo nuestro equipo está formado y titulado, como por ejemplo nuestro
+        Coach Angel Bustamante con su titulacion de TSAF (Técnico Superior en
+        Acondicionamiento Físico) dispuesto a cumplir vuestros objetivos físicos
+        y mentales
+      </p>
+    </div>
+  </div>
+</section>
 <script is:inline src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script type="module">
   document.addEventListener("astro:page-load", function () {
