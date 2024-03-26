@@ -2,7 +2,7 @@
 import { Image } from "astro:assets";
 import TATZAGENCY from "../assets/imgPatrocinadores/TATZAGENCY.webp";
 import EFNE from "../assets/imgPatrocinadores/EFNE.webp";
-import AngelaDiaz from "../assets/imgPatrocinadores/AngelaDiaz.webp";
+//import AngelaDiaz from "../assets/imgPatrocinadores/AngelaDiaz.webp";
 import HARBIZ from "../assets/imgPatrocinadores/HARBIZ.webp";
 ---
 
@@ -37,6 +37,7 @@ import HARBIZ from "../assets/imgPatrocinadores/HARBIZ.webp";
                     />
                 </div>
             </div>
+            <!--
             <div class="glide__slide flex justify-center">
                 <div
                     class="lg:h-40 lg:w-60 h-16 w-32 rounded-lg flex justify-center items-center"
@@ -49,6 +50,7 @@ import HARBIZ from "../assets/imgPatrocinadores/HARBIZ.webp";
                     />
                 </div>
             </div>
+             -->
             <div class="glide__slide flex justify-center">
                 <div
                     class="lg:h-40 lg:w-60 h-16 w-32 rounded-lg flex justify-center items-center"
@@ -71,7 +73,7 @@ import HARBIZ from "../assets/imgPatrocinadores/HARBIZ.webp";
         new Glide(".glide", {
             type: "carousel",
             startAt: 0,
-            perView: 4,
+            perView: 3, //he cambiado de 4 a 3 por comentar uno
             gap: 1,
             autoplay: 2000, // Cambiar a la velocidad de movimiento deseada en milisegundos (en este caso, cada 2 segundos)
             hoverpause: true, // Pausar el carrusel cuando se pasa el cursor sobre él
