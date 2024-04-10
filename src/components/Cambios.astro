@@ -7,87 +7,85 @@ import toñicambio from "../assets/imgCambios/Toñi.webp";
 ---
 
 <astro>
-    <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
 </astro>
 <section class="bg-white overflow-hidden">
-    <div class="mx-auto w-full px-4 pb-12 sm:px-16 lg:pb-16 xl:pb-24">
-        <div class="items-end justify-between md:flex md:pe-6 lg:pe-16 px-8">
-            <h2
-                class="text-3xl font-bold tracking-tight text-gray-900 md:text-5xl max-2sm:flex max-2sm:flex-col max-2sm:justify-center max-2sm:items-center"
-            >
-                Transformaciones <span class="px-1">de</span><span
-                    >nuestros clientes</span
-                >
-            </h2>
-        </div>
-        <div class="glide1 overflow-hidden pt-16">
-            <div class="glide__track" data-glide-el="track">
-                <div class="glide__slides flex">
-                    <div class="glide__slide flex justify-center">
-                        <div class="max-w-80">
-                            <Image
-                                alt="Cambio físico de Sara"
-                                src={saracambio}
-                                class="aspect-auto h-full w-full rounded-xl object-contain"
-                                loading={"eager"}
-                            />
-                        </div>
-                    </div>
-                    <div class="glide__slide flex justify-center">
-                        <div class="max-w-80">
-                            <Image
-                                alt="Cambio físico de David"
-                                src={davidcambio}
-                                class="aspect-auto h-full w-full rounded-xl object-contain"
-                                loading={"eager"}
-                            />
-                        </div>
-                    </div>
-                    <div class="glide__slide flex justify-center">
-                        <div class="max-w-80">
-                            <Image
-                                alt="Cambio físico de Elías"
-                                src={eliascambio}
-                                class="aspect-auto h-full w-full rounded-xl object-contain"
-                                loading={"eager"}
-                            />
-                        </div>
-                    </div>
-                    <div class="glide__slide flex justify-center">
-                        <div class="max-w-80">
-                            <Image
-                                alt="Cambio físico de Toñi"
-                                src={toñicambio}
-                                class="aspect-auto h-full w-full rounded-xl object-contain"
-                                loading={"eager"}
-                            />
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+  <div class="mx-auto w-full px-4 pb-12 sm:px-16 lg:pb-16 xl:pb-24">
+    <div class="items-end justify-between md:flex md:pe-6 lg:pe-16 px-8">
+      <h2
+        class="text-3xl font-bold tracking-tight text-gray-900 md:text-5xl max-2sm:flex max-2sm:flex-col max-2sm:justify-center max-2sm:items-center"
+      >
+        Motívate <span class="px-1"> a dar tu cambio</span>
+      </h2>
     </div>
+    <div class="glide1 overflow-hidden pt-16">
+      <div class="glide__track" data-glide-el="track">
+        <div class="glide__slides flex">
+          <div class="glide__slide flex justify-center">
+            <div class="max-w-80">
+              <Image
+                alt="Cambio físico de Sara"
+                src={saracambio}
+                class="aspect-auto h-full w-full rounded-xl object-contain"
+                loading={"eager"}
+              />
+            </div>
+          </div>
+          <div class="glide__slide flex justify-center">
+            <div class="max-w-80">
+              <Image
+                alt="Cambio físico de David"
+                src={davidcambio}
+                class="aspect-auto h-full w-full rounded-xl object-contain"
+                loading={"eager"}
+              />
+            </div>
+          </div>
+          <div class="glide__slide flex justify-center">
+            <div class="max-w-80">
+              <Image
+                alt="Cambio físico de Elías"
+                src={eliascambio}
+                class="aspect-auto h-full w-full rounded-xl object-contain"
+                loading={"eager"}
+              />
+            </div>
+          </div>
+          <div class="glide__slide flex justify-center">
+            <div class="max-w-80">
+              <Image
+                alt="Cambio físico de Toñi"
+                src={toñicambio}
+                class="aspect-auto h-full w-full rounded-xl object-contain"
+                loading={"eager"}
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
 
 <script>
-    document.addEventListener("astro:page-load", function () {
-        // @ts-ignore
-        new Glide(".glide1", {
-            type: "carousel",
-            startAt: 0,
-            perView: 1,
-            gap: 1,
-            autoplay: 4000, // Cambiar a la velocidad de movimiento deseada en milisegundos (en este caso, cada 2 segundos)
-            hoverpause: true, // Pausar el carrusel cuando se pasa el cursor sobre él
-            animationDuration: 2000, // Duración de la animación en milisegundos (en este caso, 0.5 segundos)
-            breakpoints: {
-                1024: {
-                    perView: 1,
-                },
-                600: {
-                    perView: 1,
-                },
-            },
-        }).mount();
-    });
+  document.addEventListener("astro:page-load", function () {
+    // @ts-ignore
+    new Glide(".glide1", {
+      type: "carousel",
+      startAt: 0,
+      perView: 1,
+      gap: 1,
+      autoplay: 4000, // Cambiar a la velocidad de movimiento deseada en milisegundos (en este caso, cada 2 segundos)
+      hoverpause: true, // Pausar el carrusel cuando se pasa el cursor sobre él
+      animationDuration: 2000, // Duración de la animación en milisegundos (en este caso, 0.5 segundos)
+      breakpoints: {
+        1024: {
+          perView: 1,
+        },
+        600: {
+          perView: 1,
+        },
+      },
+    }).mount();
+  });
 </script>
