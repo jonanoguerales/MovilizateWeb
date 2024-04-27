@@ -5,7 +5,7 @@ import imgCatalogo from "../assets/imgCatalogo/RECETAS.webp";
 
 <section class="text-gray-600 body-font overflow-hidden">
   <div
-    class="container px-5 lg:px-10 pt-10 sm:py-24 mx-auto flex justify-center flex-wrap items-center max-sm:h-[calc(100vh -5rem) h-[calc(100vh -7rem)"
+    class="container px-5 lg:px-10 pt-10 sm:py-24 mx-auto flex flex-col-reverse sm:flex-row justify-center flex-wrap items-center max-sm:h-[calc(100vh -5rem) h-[calc(100vh -7rem)"
   >
     <div
       class="flex flex-wrap -mx-4 mt-auto mb-auto lg:w-[60%] xl:w-1/2 sm:w-1/2 content-start sm:pr-10"
@@ -33,7 +33,18 @@ import imgCatalogo from "../assets/imgCatalogo/RECETAS.webp";
           data-aos-easing="linear"
           data-aos-duration="1000"
         >
-          Este recetario te proporcionará
+          Este recetario 
+          <span
+          class="font-bold"
+          style="
+          background-image: url(/blue_highlight_bold_03.svg);
+          background-position: center center;
+          background-repeat: no-repeat;
+          background-size: contain;
+          white-space: nowrap;"
+          >GRATIS...
+        </span>
+          te proporcionará
           <span
             class="font-bold inline-block sm:inline lg:inline-block"
             style="
@@ -42,6 +53,7 @@ import imgCatalogo from "../assets/imgCatalogo/RECETAS.webp";
           background-repeat: no-repeat;
           background-size: 100% 100%;
           padding: 10px 0px;
+          margin: -10px 0px;
           "
             >20 recetas saludables para principiantes.
           </span> Si no tienes tiempo y quieres empezar a comer mejor, aquí tienes
@@ -95,7 +107,7 @@ background-position: right bottom 5%;
     </div>
     </div>
     <div
-      class="flex justify-center xl:w-[40%] lg:w-[40%] sm:w-1/2 w-full rounded-lg mt-6 sm:mt-0 overflow-hidden"
+      class="flex justify-center xl:w-[40%] lg:w-[40%] sm:w-1/2 w-full rounded-lg mb-6 sm:mb-0 overflow-hidden"
       data-aos="fade-left"
       data-aos-easing="linear"
       data-aos-duration="800"
