@@ -269,5 +269,12 @@ const { description, title } = Astro.props;
 				}
 			}
 		</style>
+		<script is:inline src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+		<script type="module">
+		  document.addEventListener("astro:page-load", function () {
+			// Inicializar AOS después de que la página se haya cargado completamente
+			AOS.init();
+		  });
+		</script>
 	</body>
 </html>
