@@ -1,0 +1,111 @@
+---
+import { Image } from "astro:assets";
+import imgCatalogo from "../assets/imgCatalogo/RECETAS.webp";
+---
+
+<section class="text-gray-600 body-font overflow-hidden">
+  <div
+    class="container px-5 lg:px-10 pt-10 sm:py-24 mx-auto flex justify-center flex-wrap items-center max-sm:h-[calc(100vh -5rem) h-[calc(100vh -7rem)"
+  >
+    <div
+      class="flex flex-wrap -mx-4 mt-auto mb-auto lg:w-[60%] xl:w-1/2 sm:w-1/2 content-start sm:pr-10"
+    >
+      <div class="w-full sm:p-4 px-4 mb-6">
+        <h1
+          class="text-3xl md:text-4xl lg:text-4xl xl:text-6xl font-bold mb-4 text-gray-900"
+          data-aos="fade-right"
+          data-aos-easing="linear"
+          data-aos-duration="800"
+        >
+          <span
+            style="
+  background-image: url(/underline.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: right bottom 5%;
+  "
+            >20
+          </span> RECETAS SALUDABLES PARA PRINCIPIANTES
+        </h1>
+        <div
+          class="text-sm md:text-lg 2xl:text-2xl relative overflow-hidden"
+          data-aos="fade-up"
+          data-aos-easing="linear"
+          data-aos-duration="1000"
+        >
+          Este recetario te proporcionará
+          <span
+            class="font-bold inline-block sm:inline lg:inline-block"
+            style="
+          background-image: url(/blue_highlight_01.svg);
+          background-position: bottom center;
+          background-repeat: no-repeat;
+          background-size: 100% 100%;
+          padding: 10px 0px;
+          "
+            >20 recetas saludables para principiantes.
+          </span> Si no tienes tiempo y quieres empezar a comer mejor, aquí tienes
+          <span
+            style="
+          background-image: url(/underline.svg);
+          background-repeat: no-repeat;
+          background-size: contain;
+          background-position: right bottom 5%;
+          "
+            >desayunos
+          </span>
+          ,
+          <span
+            style="
+              background-image: url(/underline.svg);
+              background-repeat: no-repeat;
+              background-size: contain;
+              background-position: right bottom 5%;
+            "
+            >comidas
+          </span>
+          ,
+          <span
+            style="
+background-image: url(/underline.svg);
+background-repeat: no-repeat;
+background-size: contain;
+background-position: right bottom 5%;
+"
+            >meriendas
+          </span> y <span
+            style="
+background-image: url(/underline.svg);
+background-repeat: no-repeat;
+background-size: contain;
+background-position: right bottom 5%;
+"
+            >cenas
+          </span>para que no te rompas la cabeza en la cocina!
+        </div>
+      </div>
+      <div class="px-4">
+        <a
+            href="https://whatsapp.com/channel/0029VaG8GkaAjPXUyvDlMc0I"
+            target="_blank"
+            class="block bg-[#029cd6] px-5 py-3 text-center text-xs font-bold uppercase text-white transition hover:bg-[#0056b3] rounded-lg"
+        >
+            Obtener
+        </a>
+    </div>
+    </div>
+    <div
+      class="flex justify-center xl:w-[40%] lg:w-[40%] sm:w-1/2 w-full rounded-lg mt-6 sm:mt-0 overflow-hidden"
+      data-aos="fade-left"
+      data-aos-easing="linear"
+      data-aos-duration="800"
+    >
+      <Image
+        class="object-cover object-center w-[174px] h-[300px] sm:h-[350px] sm:w-[202px] md:h-[500px] md:w-[290px] lg:h-full xl:w-[400px]"
+        src={imgCatalogo}
+        alt="stats"
+        loading={"eager"}
+      />
+    </div>
+  </div>
+</section>
