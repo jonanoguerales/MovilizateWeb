@@ -1,0 +1,52 @@
+---
+import IconoForm from "./icons/IconoForm.astro";
+import IconoEntrenador from "./icons/IconoEntrenador.astro";
+import IconoMovil from "./icons/IconoMovil.astro";
+import IconoMusculo from "./icons/IconoMusculo.astro";
+---
+
+<div class="grid info mx-auto max-sm:pb-10 px-4 sm:px-6 items-center">
+    <div class="h-48 w-full flex flex-col justify-center items-center ">
+        <h2 class="text-3xl font-bold tracking-tight text-gray-900 md:text-5xl ">Tú eliges</h2>
+        <h2 class="text-3xl font-bold tracking-tight text-gray-900 md:text-5xl ">lo que vas a pagar</h2>
+    </div>
+    <div class="h-full w-full rounded-lg flex flex-col items-center">
+        <div class="flex items-end">
+            <IconoForm class="size-8 md:size-12" />
+        </div>
+        <div class="mt-4">
+            <h2 class="font-bold">
+                Rellena el fomrulario<span></span>
+            </h2>
+        </div>
+    </div>
+    <div class="h-full w-full rounded-lg flex flex-col items-center">
+        <div class="flex items-end">
+            <IconoMovil class= "size-8 md:size-12 bg-cyan-500"/>
+        </div>
+        <div class="mt-4">
+            <h2 class="font-bold">
+                Todo desde <span>nuestra app</span>
+            </h2>
+        </div>
+    </div>
+    <div class="h-full w-full rounded-lg flex flex-col items-center">
+        <div class="flex items-end">
+            <IconoEntrenador class="size-8 md:size-12  bg-cyan-500" />
+        </div>
+        <div class="mt-4">
+            <h2 class="font-bold">Coach 24H</h2>
+        </div>
+    </div>
+    <div class="h-full w-full rounded-lg flex flex-col items-center">
+        <div class="flex items-end">
+            <IconoMusculo class="size-8 md:size-12  bg-cyan-500" />
+        </div>
+        <div class="mt-4 flex flex-col items-center">
+            <h2 class="font-bold">Entrenamiento</h2>
+            <h2 class="font-bold">
+                y nutrición<span>personalizado</span>
+            </h2>
+        </div>
+    </div>
+</div>
