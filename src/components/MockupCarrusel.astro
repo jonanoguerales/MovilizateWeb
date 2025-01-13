@@ -10,19 +10,20 @@ const images = [
 ];
 ---
 
-<div class="relative w-[320px] h-[650px]">
+<div
+  class="relative w-[160px] h-[320px] sm:h-[400px] sm:w-[198px] md:h-[540px] md:w-[265px] 3xl:h-[650px] 3xl:w-[320px]"
+>
   <!-- Mockup del iPhone -->
   <img
     src="/mockup-iphone.png"
     alt="Mockup del iPhone"
-    class="absolute inset-0 w-[92%] h-full z-20 pointer-events-none"
-    style="left: 13px !important;"
+    class="absolute inset-0 w-[90%] 3xl:w-[92%] h-full z-20 left-2 sm:left-[0.6rem] md:left-[13px] pointer-events-none"
   />
 
   <!-- Botón de navegación anterior -->
   <button
     id="prev-btn"
-    class="absolute top-1/2 left-[-1rem] -translate-y-1/2 z-30 p-2 bg-black/50 text-white rounded-full hover:bg-black/75 transition duration-300 focus:outline-none hidden sm:block"
+    class="absolute top-1/2 left-[-1rem] -translate-y-1/2 z-30 p-2 bg-black/50 text-white rounded-full hover:bg-black/75 transition duration-300 focus:outline-none"
     aria-label="Imagen anterior"
   >
     &#8249;
@@ -31,7 +32,7 @@ const images = [
   <!-- Botón de navegación siguiente -->
   <button
     id="next-btn"
-    class="absolute top-1/2 right-[-1rem] -translate-y-1/2 z-30 p-2 bg-black/50 text-white rounded-full hover:bg-black/75 transition duration-300 focus:outline-none hidden sm:block"
+    class="absolute top-1/2 right-[-1rem] -translate-y-1/2 z-30 p-2 bg-black/50 text-white rounded-full hover:bg-black/75 transition duration-300 focus:outline-none"
     aria-label="Imagen siguiente"
   >
     &#8250;
@@ -40,14 +41,14 @@ const images = [
   <!-- Contenedor del carrusel -->
   <div
     id="image-slider"
-    class="absolute inset-0 rounded-[75px] overflow-hidden z-10"
+    class="absolute inset-0 rounded-[50px] md:rounded-[75px] overflow-hidden z-10"
   >
     {
       images.map((image, index) => (
         <img
           src={image}
           alt={`Imagen ${index + 1}`}
-          class={`absolute w-full h-full pt-4 pb-1 object-contain transition-opacity duration-[2000ms] ease-linear ${
+          class={`absolute w-full h-full py-2 pt-2 sm:pt-[0.6rem] md:pt-[0.85rem] 3xl:pt-4 pb-1 object-contain transition-opacity duration-[2000ms] ease-linear ${
             index === 0 ? "opacity-100 z-10" : "opacity-0 z-0"
           }`}
           style="top: 0; left: 0;"
