@@ -3,21 +3,32 @@ import IconoPlan from "./icons/IconoPlan.astro";
 import IconoMejorPrecio from "./icons/IconoMejorPrecio.astro";
 import IconoFreeApp from "./icons/IconoFreeApp.astro";
 import IconoTrimestral from "./icons/IconoTrimestral.astro";
+import MockupCarrusel from "./MockupCarrusel.astro";
 ---
+
 <section class="text-gray-600 body-font overflow-hidden">
+  <div
+    class="container mx-w-[550px] gap-4 px-5 lg:px-10 pt-24 sm:py-24 mx-auto flex flex-col xl:flex-row justify-center flex-wrap items-center max-sm:h-[calc(100vh -5rem)] h-[calc(100vh -7rem)]"
+  >
     <div
-      class="container mx-w-[550px] px-5 lg:px-10 pt-10 sm:py-24 mx-auto flex flex-col xl:flex-row justify-center flex-wrap items-center"
+      class="flex justify-center xl:w-[25%] lg:w-[40%] w-full rounded-lg mb-6 sm:mb-0 overflow-hidden"
+      data-aos="fade-left"
+      data-aos-easing="linear"
+      data-aos-duration="800"
     >
-      <div
-        class="flex flex-wrap mx-4 mt-auto mb-auto content-center sm:px-10"
-      >
-        <div class="w-full h-full sm:p-4 px-4 sm:mb-6">
-          <h1
-            class="text-5xl md:text-7xl lg:text-8xl xl:text-9xl flex items-center font-bold mb-4 1sm:ml-5 text-gray-900"
-            data-aos="fade-right"
-            data-aos-easing="linear"
-            data-aos-duration="800"
-          ><span>
+      <MockupCarrusel />
+    </div>
+    <div
+      class="flex flex-wrap -mx-4 mt-auto mb-auto lg:w-[60%] xl:w-[75%] content-start sm:pr-10"
+    >
+      <div class="w-full h-full sm:p-4 px-4 sm:mb-6">
+        <h1
+          class="text-5xl lg:text-7xl xl:text-8xl flex items-center font-bold mb-4 1sm:ml-5 text-gray-900"
+          data-aos="fade-right"
+          data-aos-easing="linear"
+          data-aos-duration="800"
+        >
+          <span>
             <span
               style="
     background-image: url(/underline.svg);
@@ -28,54 +39,60 @@ import IconoTrimestral from "./icons/IconoTrimestral.astro";
               >TÚ
             </span> ELIGES LO QUE PAGAS
           </span>
-          </h1>
-          <div class="grid info mx-auto max-sm:pb-10 h-full px-4 items-center bg-white text-black grid-cols-1 xl:grid-cols-2 pt-10 gap-4 xl:gap-10">
-            <div class="w-full rounded-lg flex flex-row items-center gap-2 xl:gap-0 xl:flex-col shadow-lg border-t-4 p-8">
-                <div class="mx-[4px] xl:mx-[0px]">
-                    <IconoPlan class="size-14" />
-                </div>
-                <div class="xl:mt-4">
-                    <h2 class="text-xl sm:text-3xl font-bold">
-                        Personaliza tu plan
-                    </h2>
-                </div>
-            </div>
-            <div class="w-full rounded-lg flex flex-row gap-2 xl:gap-0 xl:flex-col items-center shadow-lg border-t-4 p-8">
-                <div >
-                    <IconoMejorPrecio class="size-16" />
-                </div>
-                <div class="xl:mt-4">
-                    <h2 class="text-xl sm:text-3xl font-bold">
-                        Los mejores precios
-                    </h2>
-                </div>
-            </div>
-            <div class="w-full rounded-lg flex flex-row gap-2 xl:gap-0 xl:flex-col items-center shadow-lg border-t-4 p-8">
-                <div class="flex items-end">
-                    <IconoFreeApp class="size-16" />
-                </div>
-                <div class="xl:mt-4">
-                    <h2 class="text-xl sm:text-3xl font-bold">App Gratuita</h2>
-                </div>
-            </div>
-            <div class="max-h-[132px] xl:max-h-none w-full rounded-lg flex flex-row gap-2 xl:gap-0 xl:flex-col items-center shadow-lg border-t-4 p-8">
-                <div class="mt-[-16px] mx-[-9px] xl:mx-[0px]">
-                    <IconoTrimestral class="size-20" />
-                </div>
-                <div class="xl:mt-4">
-                    <h2 class="text-xl sm:text-3xl font-bold">Pago trimestral</h2>
-                </div>
-            </div>
-        </div>
-        </div>
-        <div class="px-4 flex items-center justify-center w-full">
-          <a
-            href="/planes/#nuevo-plan"
-            class="block bg-[#029cd6] w-full h-full 1sm:w-[300px] px-5 py-3 text-center text-xs 1sm:text-base sm:ml-4 font-bold uppercase text-white transition hover:bg-[#0056b3] rounded-lg"
+        </h1>
+        <div
+          class="grid info mx-auto max-sm:pb-10 h-full px-4 items-center bg-white text-black grid-cols-1 xl:grid-cols-2 pt-10 gap-4 xl:gap-10"
+        >
+          <div
+            class="w-full rounded-lg flex flex-row items-center gap-2 xl:gap-0 xl:flex-col shadow-lg border-t-4 p-8"
           >
-            Informame más
-          </a>
+            <div class="mx-[4px] xl:mx-[0px]">
+              <IconoPlan class="size-14" />
+            </div>
+            <div class="xl:mt-4">
+              <h2 class="text-xl sm:text-3xl font-bold">Personaliza tu plan</h2>
+            </div>
+          </div>
+          <div
+            class="w-full rounded-lg flex flex-row gap-2 xl:gap-0 xl:flex-col items-center shadow-lg border-t-4 p-8"
+          >
+            <div>
+              <IconoMejorPrecio class="size-16" />
+            </div>
+            <div class="xl:mt-4">
+              <h2 class="text-xl sm:text-3xl font-bold">Los mejores precios</h2>
+            </div>
+          </div>
+          <div
+            class="w-full rounded-lg flex flex-row gap-2 xl:gap-0 xl:flex-col items-center shadow-lg border-t-4 p-8"
+          >
+            <div class="flex items-end">
+              <IconoFreeApp class="size-16" />
+            </div>
+            <div class="xl:mt-4">
+              <h2 class="text-xl sm:text-3xl font-bold">App Gratuita</h2>
+            </div>
+          </div>
+          <div
+            class="max-h-[132px] xl:max-h-none w-full rounded-lg flex flex-row gap-2 xl:gap-0 xl:flex-col items-center shadow-lg border-t-4 p-8"
+          >
+            <div class="mt-[-16px] mx-[-9px] xl:mx-[0px]">
+              <IconoTrimestral class="size-20" />
+            </div>
+            <div class="xl:mt-4">
+              <h2 class="text-xl sm:text-3xl font-bold">Pago trimestral</h2>
+            </div>
+          </div>
         </div>
       </div>
+      <div class="px-4 flex items-center justify-center w-full">
+        <a
+          href="/planes/#nuevo-plan"
+          class="block bg-[#029cd6] w-full h-full 1sm:w-[300px] px-5 py-3 text-center text-xs 1sm:text-base sm:ml-4 font-bold uppercase text-white transition hover:bg-[#0056b3] rounded-lg"
+        >
+          Informame más
+        </a>
+      </div>
     </div>
-  </section>
+  </div>
+</section>

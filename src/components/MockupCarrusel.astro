@@ -1,0 +1,108 @@
+---
+const images = [
+  "/imgPlanes/imagen1.jpg",
+  "/imgPlanes/imagen2.jpg",
+  "/imgPlanes/imagen3.jpg",
+  "/imgPlanes/imagen4.jpg",
+  "/imgPlanes/imagen5.jpg",
+  "/imgPlanes/imagen6.jpg",
+  "/imgPlanes/imagen7.jpg",
+];
+---
+
+<div class="relative w-[320px] h-[650px]">
+  <!-- Mockup del iPhone -->
+  <img
+    src="/mockup-iphone.png"
+    alt="Mockup del iPhone"
+    class="absolute inset-0 w-[93%] h-full z-10 pointer-events-none"
+    style="left: 12px !important;"
+  />
+
+  <!-- Contenedor del carrusel -->
+  <div
+    id="image-slider"
+    class="absolute inset-0 rounded-[75px] pt-4 pb-1 overflow-hidden"
+  >
+    <img
+      src={images[0]}
+      alt="Primera imagen"
+      class="object-contain w-full h-full transition-opacity duration-700 opacity-100"
+    />
+  </div>
+</div>
+
+<script>
+  const images = [
+    "/imgPlanes/imagen1.jpg",
+    "/imgPlanes/imagen2.jpg",
+    "/imgPlanes/imagen3.jpg",
+    "/imgPlanes/imagen4.jpg",
+    "/imgPlanes/imagen5.jpg",
+    "/imgPlanes/imagen6.jpg",
+    "/imgPlanes/imagen7.jpg",
+  ];
+  const slideDuration = 3000; // Tiempo entre cambios de imagen
+
+  let currentIndex = 0;
+  let touchStartX = 0;
+  let touchEndX = 0;
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const slider = document.getElementById("image-slider");
+
+    if (!slider) {
+      console.error("No se encontró el contenedor del carrusel.");
+      return;
+    }
+
+    // Cambiar imagen automáticamente
+    const interval = setInterval(() => {
+      nextImage();
+    }, slideDuration);
+
+    // Cambiar imagen al deslizar (swipe)
+    slider.addEventListener("touchstart", (e) => {
+      touchStartX = e.changedTouches[0].screenX; // Coordenada inicial del toque
+    });
+
+    slider.addEventListener("touchend", (e) => {
+      touchEndX = e.changedTouches[0].screenX; // Coordenada final del toque
+      handleSwipe();
+    });
+
+    // Función para cambiar a la siguiente imagen
+    const nextImage = () => {
+      currentIndex = (currentIndex + 1) % images.length; // Avanzar al siguiente índice
+      updateImage();
+    };
+
+    // Función para cambiar a la imagen anterior
+    const prevImage = () => {
+      currentIndex = (currentIndex - 1 + images.length) % images.length; // Retroceder al índice anterior
+      updateImage();
+    };
+
+    // Función para actualizar la imagen en el carrusel
+    const updateImage = () => {
+      const img = slider.querySelector("img");
+      if (img) {
+        img.src = images[currentIndex];
+        img.alt = `Imagen ${currentIndex + 1}`;
+      }
+    };
+
+    // Detectar dirección del swipe y cambiar la imagen
+    const handleSwipe = () => {
+      const swipeDistance = touchEndX - touchStartX;
+
+      if (swipeDistance > 50) {
+        // Swipe hacia la derecha (anterior)
+        prevImage();
+      } else if (swipeDistance < -50) {
+        // Swipe hacia la izquierda (siguiente)
+        nextImage();
+      }
+    };
+  });
+</script>

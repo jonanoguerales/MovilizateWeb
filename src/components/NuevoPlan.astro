@@ -3,100 +3,135 @@ import IconoPlan from "./icons/IconoPlan.astro";
 import IconoMejorPrecio from "./icons/IconoMejorPrecio.astro";
 import IconoFreeApp from "./icons/IconoFreeApp.astro";
 import IconoTrimestral from "./icons/IconoTrimestral.astro";
-import Image from "astro/components/Image.astro";
-import ImagenForm from "../assets/imagenform.webp";
+//import Image from "astro/components/Image.astro";
+//import ImagenForm from "../assets/imagenform.webp";
+import MockupCarrusel from "./MockupCarrusel.astro";
 ---
+
 <section class="text-gray-600 body-font overflow-hidden" id="nuevo-plan">
-    <div
-      class="container mx-w-[550px] px-5 lg:px-10 pt-10 sm:py-24 mx-auto flex flex-col xl:flex-row justify-center flex-wrap items-center max-sm:h-[calc(100vh -5rem) h-[calc(100vh -7rem)"
-    >
-    <div
-    class="flex justify-center xl:w-[25%] lg:w-[40%] md:w-[37%] sm:w-[32%]  w-full rounded-lg mb-6 sm:mb-0 overflow-hidden"
-    data-aos="fade-left"
-    data-aos-easing="linear"
-    data-aos-duration="800"
+  <div
+    class="container mx-w-[550px] gap-4 px-5 lg:px-10 pt-10 sm:py-24 mx-auto flex flex-col xl:flex-row justify-center flex-wrap items-center max-sm:h-[calc(100vh -5rem)] h-[calc(100vh -7rem)]"
   >
-    <Image
-      class="object-cover object-center w-[174px] sm:h-[350px] sm:w-[193px] md:h-[500px] md:w-[290px] lg:h-full xl:w-[400px]"
-      src={ImagenForm}
-      alt="stats"
-      loading={"eager"}
-    />
-  </div>
-      <div
-        class="flex flex-wrap -mx-4 mt-auto mb-auto lg:w-[60%] xl:w-[75%] content-start sm:pr-10"
-      >
-        <div class="w-full sm:p-4 px-4 mb-6">
-          <h1
-            class="text-3xl md:text-4xl lg:text-4xl xl:text-6xl flex flex-col items-center font-bold mb-4 1sm:ml-5 text-gray-900"
-            data-aos="fade-right"
-            data-aos-easing="linear"
-            data-aos-duration="800"
-          ><span>
+    <div
+      class="flex justify-center xl:w-[25%] lg:w-[40%] w-full rounded-lg mb-6 sm:mb-0 overflow-hidden"
+      data-aos="fade-left"
+      data-aos-easing="linear"
+      data-aos-duration="800"
+    >
+      <!--<Image
+        class="object-cover object-center w-[174px] sm:h-[350px] sm:w-[193px] md:h-[500px] md:w-[290px] lg:h-full xl:w-[400px]"
+        src={ImagenForm}
+        alt="Vista previa de formulario"
+        loading={"eager"}
+      />-->
+      <MockupCarrusel />
+    </div>
+
+    <div
+      class="flex flex-wrap -mx-4 mt-auto mb-auto lg:w-[60%] xl:w-[75%] content-start sm:pr-10"
+    >
+      <div class="w-full sm:p-4 px-4 mb-6">
+        <h1
+          class="text-3xl md:text-4xl lg:text-4xl xl:text-6xl flex flex-col items-center font-bold mb-4 1sm:ml-5 text-gray-900"
+          data-aos="fade-right"
+          data-aos-easing="linear"
+          data-aos-duration="800"
+        >
+          <span>
             <span
               style="
-    background-image: url(/underline.svg);
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: right bottom 5%;
-    "
+                background-image: url(/underline.svg);
+                background-repeat: no-repeat;
+                background-size: contain;
+                background-position: right bottom 5%;
+              "
               >TÚ
-            </span> ELIGES
+            </span>
+            ELIGES
           </span>
           <span> LO QUE PAGAS</span>
-          </h1>
-          <div class="grid info mx-auto max-sm:pb-10 4xl:h-[550px] px-4 items-center bg-white text-black grid-cols-1 xl:grid-cols-2 3xl:grid-cols-4 pt-10 gap-4 xl:gap-10">
-            <div class="h-full w-full rounded-lg flex flex-col items-start shadow-lg border-t-4 p-8">
-                <div class="h-[38px]">
-                    <IconoPlan class="size-7" />
-                </div>
-                <div class="mt-4">
-                    <h2 class="text-xl font-bold">
-                        Personaliza tu plan
-                    </h2>
-                    <p> Todos los servicios de Movilízate están en tu mano. Tu eliges los que más se adaptan a tu objetivo y por los que quieres pagar.</p>
-                </div>
-            </div>
-            <div class="h-full w-full rounded-lg flex flex-col items-start shadow-lg border-t-4 p-8">
-                <div class="h-[33px]">
-                    <IconoMejorPrecio class="size-9" />
-                </div>
-                <div class="mt-4">
-                    <h2 class="text-xl font-bold">
-                        Los mejores precios
-                    </h2>
-                    <p>En Movilízate, somos los únicos entrenadores que te ofrecen elegir lo que estás dispuesto a pagar, pero además te ofrecemos los precios más atrevidos del sector. </p>
-                </div>
-            </div>
-            <div class="h-full w-full rounded-lg flex flex-col items-start shadow-lg border-t-4 p-8">
-                <div class="h-[38px] flex items-end">
-                    <IconoFreeApp class="size-7" />
-                </div>
-                <div class="mt-4">
-                    <h2 class="text-xl font-bold">App Gratuita</h2>
-                    <p>Todos los servicios que escojas estarán incluidos en nuestra aplicación. Te regalamos el acceso a nuestra app para planificar lo que previamente has escogido.</p>
-                </div>
-            </div>
-            <div class="h-full w-full rounded-lg flex flex-col items-start shadow-lg border-t-4 p-8">
-                <div class="h-[32px]">
-                    <IconoTrimestral class="size-10" />
-                </div>
-                <div class="mt-4">
-                    <h2 class="text-xl font-bold">Pago trimestral</h2>
-<p>El precio que calculas según los servicios que elijas, será el coste mensual, pero nosotros te hacemos un presupuesto trimestral. Pagas de una vez y te olvidas. Además esto te asegura que vas a conseguir tu cambio físico en 3 meses si o si.</p>
-                </div>
-            </div>
-        </div>
-        </div>
-        <div class="px-4 max-sm:w-full">
-          <a
-            href="https://form.jotform.com/242472542753357"
-            target="_blank"
-            class="block bg-[#029cd6] px-5 py-3 text-center text-xs 1sm:ml-4 font-bold uppercase text-white transition hover:bg-[#0056b3] rounded-lg"
+        </h1>
+
+        <div
+          class="grid info mx-auto max-sm:pb-10 4xl:h-[550px] px-4 items-center bg-white text-black grid-cols-1 xl:grid-cols-2 3xl:grid-cols-4 pt-10 gap-4 xl:gap-10"
+        >
+          <div
+            class="h-full w-full rounded-lg flex flex-col items-start shadow-lg border-t-4 p-8"
           >
-            Obtener plan
-          </a>
+            <div class="h-[38px]">
+              <IconoPlan class="size-7" />
+            </div>
+            <div class="mt-4">
+              <h2 class="text-xl font-bold">Personaliza tu plan</h2>
+              <p>
+                Todos los servicios de Movilízate están en tu mano. Tú eliges
+                los que más se adaptan a tu objetivo y por los que quieres
+                pagar.
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="h-full w-full rounded-lg flex flex-col items-start shadow-lg border-t-4 p-8"
+          >
+            <div class="h-[33px]">
+              <IconoMejorPrecio class="size-9" />
+            </div>
+            <div class="mt-4">
+              <h2 class="text-xl font-bold">Los mejores precios</h2>
+              <p>
+                En Movilízate, somos los únicos entrenadores que te ofrecen
+                elegir lo que estás dispuesto a pagar, pero además te ofrecemos
+                los precios más atrevidos del sector.
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="h-full w-full rounded-lg flex flex-col items-start shadow-lg border-t-4 p-8"
+          >
+            <div class="h-[38px] flex items-end">
+              <IconoFreeApp class="size-7" />
+            </div>
+            <div class="mt-4">
+              <h2 class="text-xl font-bold">App Gratuita</h2>
+              <p>
+                Todos los servicios que escojas estarán incluidos en nuestra
+                aplicación. Te regalamos el acceso a nuestra app para planificar
+                lo que previamente has escogido.
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="h-full w-full rounded-lg flex flex-col items-start shadow-lg border-t-4 p-8"
+          >
+            <div class="h-[32px]">
+              <IconoTrimestral class="size-10" />
+            </div>
+            <div class="mt-4">
+              <h2 class="text-xl font-bold">Pago trimestral</h2>
+              <p>
+                El precio que calculas según los servicios que elijas será el
+                coste mensual, pero nosotros te hacemos un presupuesto
+                trimestral. Pagas de una vez y te olvidas. Además, esto te
+                asegura que vas a conseguir tu cambio físico en 3 meses sí o sí.
+              </p>
+            </div>
+          </div>
         </div>
       </div>
+
+      <div class="px-4 max-sm:w-full">
+        <a
+          href="https://form.jotform.com/242472542753357"
+          target="_blank"
+          class="block bg-[#029cd6] px-5 py-3 text-center text-xs 1sm:ml-4 font-bold uppercase text-white transition hover:bg-[#0056b3] rounded-lg"
+          rel="noopener noreferrer"
+        >
+          Obtener plan
+        </a>
+      </div>
     </div>
-  </section>
+  </div>
+</section>
