@@ -15,31 +15,53 @@ const images = [
   <img
     src="/mockup-iphone.png"
     alt="Mockup del iPhone"
-    class="absolute inset-0 w-[93%] h-full z-10 pointer-events-none"
-    style="left: 12px !important;"
+    class="absolute inset-0 w-[92%] h-full z-20 pointer-events-none"
+    style="left: 13px !important;"
   />
+
+  <!-- Botón de navegación anterior -->
+  <button
+    id="prev-btn"
+    class="absolute top-1/2 left-[-1rem] -translate-y-1/2 z-30 p-2 bg-black/50 text-white rounded-full hover:bg-black/75 transition duration-300 focus:outline-none hidden sm:block"
+    aria-label="Imagen anterior"
+  >
+    &#8249;
+  </button>
+
+  <!-- Botón de navegación siguiente -->
+  <button
+    id="next-btn"
+    class="absolute top-1/2 right-[-1rem] -translate-y-1/2 z-30 p-2 bg-black/50 text-white rounded-full hover:bg-black/75 transition duration-300 focus:outline-none hidden sm:block"
+    aria-label="Imagen siguiente"
+  >
+    &#8250;
+  </button>
 
   <!-- Contenedor del carrusel -->
   <div
     id="image-slider"
-    class="absolute inset-0 rounded-[75px] pt-4 pb-1 overflow-hidden"
+    class="absolute inset-0 rounded-[75px] overflow-hidden z-10"
   >
     {
       images.map((image, index) => (
         <img
           src={image}
           alt={`Imagen ${index + 1}`}
-          class={`absolute w-full h-full object-contain transition-transform duration-1000 ease-in-out ${
-            index === 0 ? "translate-x-0" : "translate-x-full"
+          class={`absolute w-full h-full pt-4 pb-1 object-contain transition-opacity duration-[2000ms] ease-linear ${
+            index === 0 ? "opacity-100 z-10" : "opacity-0 z-0"
           }`}
-          style="top: 0; left: 0;padding-top: 1rem;padding-bottom: 0.25rem;"
+          style="top: 0; left: 0;"
         />
       ))
     }
   </div>
 </div>
 
-<script>
+<script is:inline>
+  // Mantener el índice actual entre transiciones
+  window.currentCarouselIndex = window.currentCarouselIndex || 0;
+
+  let autoSlideInterval;
   const images = [
     "/imgPlanes/imagen1.jpg",
     "/imgPlanes/imagen2.jpg",
@@ -50,57 +72,53 @@ const images = [
     "/imgPlanes/imagen7.jpg",
   ];
 
-  const slideDuration = 4000; // Tiempo entre cambios de imagen
-  let currentIndex = 0;
-  let touchStartX = 0;
-  let touchEndX = 0;
+  const slideDuration = 6000; // Tiempo entre cambios automáticos
 
-  document.addEventListener("DOMContentLoaded", () => {
+  const initializeCarousel = () => {
     const slider = document.getElementById("image-slider");
     const slides = slider?.querySelectorAll("img");
+    const prevBtn = document.getElementById("prev-btn");
+    const nextBtn = document.getElementById("next-btn");
 
-    if (!slider || slides?.length === 0) {
+    if (!slider || !slides || slides.length === 0) {
       console.error(
         "No se encontró el contenedor del carrusel o las imágenes."
       );
       return;
     }
 
-    // Cambiar automáticamente entre imágenes
-    const interval = setInterval(() => {
-      changeSlide("next");
-    }, slideDuration);
+    // Limpia cualquier intervalo previo
+    if (autoSlideInterval) {
+      clearInterval(autoSlideInterval);
+    }
 
-    // Detectar eventos de touch para swipe
+    // Función para cambiar de imagen
+    const changeSlide = (direction) => {
+      const previousIndex = window.currentCarouselIndex;
+      window.currentCarouselIndex =
+        direction === "next"
+          ? (window.currentCarouselIndex + 1) % images.length
+          : (window.currentCarouselIndex - 1 + images.length) % images.length;
+
+      // Ocultar la imagen anterior
+      slides[previousIndex]?.classList.remove("opacity-100", "z-10");
+      slides[previousIndex]?.classList.add("opacity-0", "z-0");
+
+      // Mostrar la nueva imagen
+      slides[window.currentCarouselIndex]?.classList.remove("opacity-0", "z-0");
+      slides[window.currentCarouselIndex]?.classList.add("opacity-100", "z-10");
+    };
+
+    // Swipe táctil
+    let touchStartX = 0;
+    let touchEndX = 0;
+
     slider.addEventListener("touchstart", (e) => {
       touchStartX = e.changedTouches[0].screenX;
     });
 
     slider.addEventListener("touchend", (e) => {
       touchEndX = e.changedTouches[0].screenX;
-      handleSwipe();
-    });
-
-    // Detectar eventos de mouse (para soporte de arrastrar en escritorio)
-    let isMouseDown = false;
-    let startX = 0;
-
-    slider.addEventListener("mousedown", (e) => {
-      isMouseDown = true;
-      startX = e.clientX;
-    });
-
-    slider.addEventListener("mouseup", (e) => {
-      if (isMouseDown) {
-        const swipeDistance = e.clientX - startX;
-        if (swipeDistance > 50) changeSlide("prev");
-        if (swipeDistance < -50) changeSlide("next");
-      }
-      isMouseDown = false;
-    });
-
-    // Función para manejar el swipe
-    const handleSwipe = () => {
       const swipeDistance = touchEndX - touchStartX;
 
       if (swipeDistance > 50) {
@@ -108,24 +126,49 @@ const images = [
       } else if (swipeDistance < -50) {
         changeSlide("next");
       }
+
+      resetAutoSlide();
+    });
+
+    // Botones de navegación
+    prevBtn?.addEventListener("click", () => {
+      changeSlide("prev");
+      resetAutoSlide();
+    });
+
+    nextBtn?.addEventListener("click", () => {
+      changeSlide("next");
+      resetAutoSlide();
+    });
+
+    // Cambio automático
+    const startAutoSlide = () => {
+      autoSlideInterval = setInterval(() => {
+        changeSlide("next");
+      }, slideDuration);
     };
 
-    // Función para cambiar de imagen
-    const changeSlide = (direction) => {
-      slides?.[currentIndex].classList.remove("translate-x-0");
-      slides?.[currentIndex].classList.add(
-        direction === "next" ? "-translate-x-full" : "translate-x-full"
-      );
-
-      currentIndex =
-        direction === "next"
-          ? (currentIndex + 1) % images.length
-          : (currentIndex - 1 + images.length) % images.length;
-
-      slides?.[currentIndex].classList.remove(
-        direction === "next" ? "translate-x-full" : "-translate-x-full"
-      );
-      slides?.[currentIndex].classList.add("translate-x-0");
+    const resetAutoSlide = () => {
+      clearInterval(autoSlideInterval);
+      startAutoSlide();
     };
-  });
+
+    // Configuración inicial para mantener el estado
+    const currentIndex = window.currentCarouselIndex || 0;
+    slides.forEach((slide, index) => {
+      if (index === currentIndex) {
+        slide.classList.add("opacity-100", "z-10");
+        slide.classList.remove("opacity-0", "z-0");
+      } else {
+        slide.classList.add("opacity-0", "z-0");
+        slide.classList.remove("opacity-100", "z-10");
+      }
+    });
+
+    // Iniciar el cambio automático
+    startAutoSlide();
+  };
+
+  // Inicializar el carrusel al cargar o al volver a la página
+  document.addEventListener("astro:page-load", initializeCarousel);
 </script>
