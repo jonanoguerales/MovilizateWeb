@@ -24,11 +24,18 @@ const images = [
     id="image-slider"
     class="absolute inset-0 rounded-[75px] pt-4 pb-1 overflow-hidden"
   >
-    <img
-      src={images[0]}
-      alt="Primera imagen"
-      class="object-contain w-full h-full transition-opacity duration-700 opacity-100"
-    />
+    {
+      images.map((image, index) => (
+        <img
+          src={image}
+          alt={`Imagen ${index + 1}`}
+          class={`absolute w-full h-full object-contain transition-transform duration-1000 ease-in-out ${
+            index === 0 ? "translate-x-0" : "translate-x-full"
+          }`}
+          style="top: 0; left: 0;padding-top: 1rem;padding-bottom: 0.25rem;"
+        />
+      ))
+    }
   </div>
 </div>
 
@@ -42,67 +49,83 @@ const images = [
     "/imgPlanes/imagen6.jpg",
     "/imgPlanes/imagen7.jpg",
   ];
-  const slideDuration = 3000; // Tiempo entre cambios de imagen
 
+  const slideDuration = 4000; // Tiempo entre cambios de imagen
   let currentIndex = 0;
   let touchStartX = 0;
   let touchEndX = 0;
 
   document.addEventListener("DOMContentLoaded", () => {
     const slider = document.getElementById("image-slider");
+    const slides = slider?.querySelectorAll("img");
 
-    if (!slider) {
-      console.error("No se encontró el contenedor del carrusel.");
+    if (!slider || slides?.length === 0) {
+      console.error(
+        "No se encontró el contenedor del carrusel o las imágenes."
+      );
       return;
     }
 
-    // Cambiar imagen automáticamente
+    // Cambiar automáticamente entre imágenes
     const interval = setInterval(() => {
-      nextImage();
+      changeSlide("next");
     }, slideDuration);
 
-    // Cambiar imagen al deslizar (swipe)
+    // Detectar eventos de touch para swipe
     slider.addEventListener("touchstart", (e) => {
-      touchStartX = e.changedTouches[0].screenX; // Coordenada inicial del toque
+      touchStartX = e.changedTouches[0].screenX;
     });
 
     slider.addEventListener("touchend", (e) => {
-      touchEndX = e.changedTouches[0].screenX; // Coordenada final del toque
+      touchEndX = e.changedTouches[0].screenX;
       handleSwipe();
     });
 
-    // Función para cambiar a la siguiente imagen
-    const nextImage = () => {
-      currentIndex = (currentIndex + 1) % images.length; // Avanzar al siguiente índice
-      updateImage();
-    };
+    // Detectar eventos de mouse (para soporte de arrastrar en escritorio)
+    let isMouseDown = false;
+    let startX = 0;
 
-    // Función para cambiar a la imagen anterior
-    const prevImage = () => {
-      currentIndex = (currentIndex - 1 + images.length) % images.length; // Retroceder al índice anterior
-      updateImage();
-    };
+    slider.addEventListener("mousedown", (e) => {
+      isMouseDown = true;
+      startX = e.clientX;
+    });
 
-    // Función para actualizar la imagen en el carrusel
-    const updateImage = () => {
-      const img = slider.querySelector("img");
-      if (img) {
-        img.src = images[currentIndex];
-        img.alt = `Imagen ${currentIndex + 1}`;
+    slider.addEventListener("mouseup", (e) => {
+      if (isMouseDown) {
+        const swipeDistance = e.clientX - startX;
+        if (swipeDistance > 50) changeSlide("prev");
+        if (swipeDistance < -50) changeSlide("next");
       }
-    };
+      isMouseDown = false;
+    });
 
-    // Detectar dirección del swipe y cambiar la imagen
+    // Función para manejar el swipe
     const handleSwipe = () => {
       const swipeDistance = touchEndX - touchStartX;
 
       if (swipeDistance > 50) {
-        // Swipe hacia la derecha (anterior)
-        prevImage();
+        changeSlide("prev");
       } else if (swipeDistance < -50) {
-        // Swipe hacia la izquierda (siguiente)
-        nextImage();
+        changeSlide("next");
       }
+    };
+
+    // Función para cambiar de imagen
+    const changeSlide = (direction) => {
+      slides?.[currentIndex].classList.remove("translate-x-0");
+      slides?.[currentIndex].classList.add(
+        direction === "next" ? "-translate-x-full" : "translate-x-full"
+      );
+
+      currentIndex =
+        direction === "next"
+          ? (currentIndex + 1) % images.length
+          : (currentIndex - 1 + images.length) % images.length;
+
+      slides?.[currentIndex].classList.remove(
+        direction === "next" ? "translate-x-full" : "-translate-x-full"
+      );
+      slides?.[currentIndex].classList.add("translate-x-0");
     };
   });
 </script>
