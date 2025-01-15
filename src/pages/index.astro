@@ -11,101 +11,100 @@ import fotoperfilmovil from "../assets/fotoPrincipalIniciomovil2.webp";
 import Tienda from "../components/Tienda.astro";
 import Catalogo from "../components/Catalogo.astro";
 import NuevoPlan2 from "../components/NuevoPlan2.astro";
+import IndexHome from "../components/Index";
 //import VideoCard from "../components/VideoCard.astro";
 ---
 
 <Layout
-	title="Movilizate"
-	description="Movilizate mas que una web, consigue el físico que tanto quieres,planes de entrenamiento y nutrición personalizados"
+  title="Movilizate"
+  description="Movilizate mas que una web, consigue el físico que tanto quieres,planes de entrenamiento y nutrición personalizados"
 >
-	<main>
-		<div
-			class="relative flex items-center overflow-hidden"
-			style="height: calc(100vh - 7rem)"
-		>
-			<div
-				class="absolute top-0 left-0 w-full h-full overflow-hidden lg:w-full"
-			>
-				<Image
-					src={fotoperfilmovil}
-					alt="Imagen de fondo pagina principal"
-					class="object-fill object-center h-full w-full md:hidden"
-					loading={"eager"}
-				/>
-				<Image
-					src={fotoperfilmax}
-					alt="Imagen de fondo pagina principal"
-					class="object-fill object-center h-full w-full lg:hidden"
-					loading={"eager"}
-				/>
-				<Image
-					src={fotoperfil}
-					alt="Imagen de fondo pagina principal"
-					class="object-fill object-center h-full w-full"
-					loading={"eager"}
-				/>
-			</div>
-			<div
-				class="absolute max-md:inset-0 max-md:bg-black max-md:opacity-50"
-			>
-			</div>
-			<div
-				class="text-white text-center z-10 relative md:ml-[15%] gap-7 flex flex-col items-center"
-			>
-				<h1
-					class="text-4xl md:text-6xl lg:text-7xl 4xl:text-8xl font-bold mb-4 animated fadeInUp overflow-hidden"
-				>
-					<p
-						class="text-green-500 text-5xl md:text-7xl lg:text-8xl 4xl:text-9xl"
-					>
-						CONSIGUE
-					</p>
-					<p>EL FISICO QUE</p>TANTO <span
-						class="text-green-500 text-5xl md:text-7xl lg:text-8xl 4xl:text-9xl"
-						>QUIERES</span
-					>
-				</h1>
-				<p
-					class="text-lg md:text-xl lg:text-2xl animated fadeInLeft overflow-hidden"
-				>
-					Planes de entrenamiento y nutrición personalizados para tu
-					objetivo
-				</p>
-				<p
-					class="text-lg md:text-xl lg:text-2xl animated fadeInLeft overflow-hidden"
-				>
-					Movilizate, eres tu salud
-				</p>
-				<a
-					href="/planes/"
-					class="overflow-hidden animated fadeInRight inline-flex justify-center w-52 hover:text-green-500 items-center py-3 px-5 sm:ms-4 text-lg font-medium text-center text-white rounded-lg border border-white hover:bg-white"
-				>
-					APÚNTATE YA!
-				</a>
-			</div>
-		</div>
-		<Metodos
-			clase="bg-[#2929AD] text-white grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 pt-10 lg:px-40 xl:gap-10"
-			sizeiconos="size-28"
-			sizecont="h-[150px]"
-			sizeh2="text-3xl flex max-3xl:flex-col max-3xl:items-center"
-			sizeh3="text-3xl flex max-4xl:flex-col max-4xl:items-center"
-			sizeh4="text-3xl"
-			sizeespacio="ml-2"
-		/>
-		<NuevoPlan2 />
-		<Catalogo />
-		<Tienda />
-		<!--<VideoCard />-->
-		<Testimonios />
-		<Cambios />
-		<Patrocinadores astro:page-load />
-	</main>
+  <main>
+    <div
+      class="relative flex items-center overflow-hidden"
+      style="height: calc(100vh - 7rem)"
+    >
+      <div
+        class="absolute top-0 left-0 w-full h-full overflow-hidden lg:w-full"
+      >
+        <Image
+          src={fotoperfilmovil}
+          alt="Imagen de fondo pagina principal"
+          class="object-fill object-center h-full w-full md:hidden"
+          loading={"eager"}
+        />
+        <Image
+          src={fotoperfilmax}
+          alt="Imagen de fondo pagina principal"
+          class="object-fill object-center h-full w-full lg:hidden"
+          loading={"eager"}
+        />
+        <Image
+          src={fotoperfil}
+          alt="Imagen de fondo pagina principal"
+          class="object-fill object-center h-full w-full"
+          loading={"eager"}
+        />
+      </div>
+      <div class="absolute max-md:inset-0 max-md:bg-black max-md:opacity-50">
+      </div>
+      <div
+        class="text-white text-center z-10 relative md:ml-[15%] gap-7 flex flex-col items-center"
+      >
+        <h1
+          class="text-4xl md:text-6xl lg:text-7xl 4xl:text-8xl font-bold mb-4 animated fadeInUp overflow-hidden"
+        >
+          <p
+            class="text-green-500 text-5xl md:text-7xl lg:text-8xl 4xl:text-9xl"
+          >
+            CONSIGUE
+          </p>
+          <p>EL FISICO QUE</p>TANTO <span
+            class="text-green-500 text-5xl md:text-7xl lg:text-8xl 4xl:text-9xl"
+            >QUIERES</span
+          >
+        </h1>
+        <p
+          class="text-lg md:text-xl lg:text-2xl animated fadeInLeft overflow-hidden"
+        >
+          Planes de entrenamiento y nutrición personalizados para tu objetivo
+        </p>
+        <p
+          class="text-lg md:text-xl lg:text-2xl animated fadeInLeft overflow-hidden"
+        >
+          Movilizate, eres tu salud
+        </p>
+        <a
+          href="/planes/"
+          class="overflow-hidden animated fadeInRight inline-flex justify-center w-52 hover:text-green-500 items-center py-3 px-5 sm:ms-4 text-lg font-medium text-center text-white rounded-lg border border-white hover:bg-white"
+        >
+          APÚNTATE YA!
+        </a>
+      </div>
+    </div>
+    <Metodos
+      clase="bg-[#2929AD] text-white grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 pt-10 lg:px-40 xl:gap-10"
+      sizeiconos="size-28"
+      sizecont="h-[150px]"
+      sizeh2="text-3xl flex max-3xl:flex-col max-3xl:items-center"
+      sizeh3="text-3xl flex max-4xl:flex-col max-4xl:items-center"
+      sizeh4="text-3xl"
+      sizeespacio="ml-2"
+    />
+    <IndexHome client:visible />
+    <NuevoPlan2 />
+    <Catalogo />
+    <Tienda />
+    <!--<VideoCard />-->
+    <Testimonios />
+    <Cambios />
+    <Patrocinadores astro:page-load />
+  </main>
 </Layout>
 
 <style>
-	.info {
-		color: white;
-		background-color: rgb(41, 41, 173);
-	}
+  .info {
+    color: white;
+    background-color: rgb(41, 41, 173);
+  }
 </style>

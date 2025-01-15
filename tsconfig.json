@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "jsx": "react-jsx", // Configuración para React 17+ y TypeScript
+    "target": "ESNext", // Configuración moderna de JavaScript
+    "module": "ESNext",
+    "moduleResolution": "node",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "types": ["astro/client"]
+  },
+  "include": ["src/**/*"],
+  "exclude": ["node_modules"]
+}
