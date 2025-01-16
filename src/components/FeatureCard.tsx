@@ -22,7 +22,7 @@ export const FeatureCard = ({
       )}
     >
       <div className="relative z-10 flex flex-col gap-4">
-        <div className="text-primary flex h-12 w-12 items-center justify-center rounded-xl bg-red-500 sm:bg-white/10 backdrop-blur-sm">
+        <div className="text-primary flex h-12 w-12 items-center justify-center rounded-xl style-icon">
           {icon}
         </div>
         <h3 className="text-xl font-semibold text-white">{title}</h3>
