@@ -45,7 +45,7 @@
       var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert)
       var(--tw-backdrop-opacity) var(--tw-backdrop-saturate)
       var(--tw-backdrop-sepia) !important;
-    background-color: #ffffff1a !important;
+    background-color: #4d4d4d !important;
   }
   /* Custom scrollbar */
   ::-webkit-scrollbar {
