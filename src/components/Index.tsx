@@ -8,7 +8,7 @@ const Index = () => {
       <section className="px-6 py-24 bg-black/50">
         <div className="container mx-auto flex flex-col items-center gap-2">
           <div className="max-w-3xl mx-auto text-center">
-            <h1 className="animate-fade-down text-4xl md:text-6xl font-bold text-white mb-6">
+            <h1 className="animate-fade-down text-5xl lg:text-6xl font-bold text-white mb-6">
               Movilízate Online
             </h1>
             <p className="animate-fade-up text-lg md:text-xl text-white/80 mb-8">
@@ -21,6 +21,7 @@ const Index = () => {
               title="Entrenamiento online"
               description="Ponte en forma de manera online en grupos de hasta 5 personas"
               icon={<Dumbbell className="h-6 w-6" />}
+              className="bg-white/10 backdrop-blur-sm"
             />
             <FeatureCard
               title="Desde cualquier lugar"

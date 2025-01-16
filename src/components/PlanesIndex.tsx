@@ -29,8 +29,8 @@ const PlanesIndex = () => {
       {/* Pricing Section */}
       <section className="px-6 py-12 sm:py-24 bg-black/50">
         <div className="container mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12">
-            Nuestros Planes
+          <h2 className="text-5xl lg:text-6xl font-bold text-white text-center mb-12">
+            Movilízate Online
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {plans.map((plan, index) => (
@@ -54,7 +54,8 @@ const PlanesIndex = () => {
               Comienza tu transformación hoy
             </h2>
             <p className="text-lg text-white/80 mb-8">
-              Únete a nuestra comunidad y alcanza tus objetivos fitness
+              ¡No lo pienses más! Es el momento de ponerte en forma de una vez
+              por todas.
             </p>
             <a
               href="https://form.jotform.com/250032690598056"

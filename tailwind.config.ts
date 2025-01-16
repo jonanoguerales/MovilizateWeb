@@ -22,6 +22,19 @@ export default {
       },
     },
     extend: {
+      screens: {
+        "2xl": "1400px",
+        "3xl": "1599px",
+        "4xl": "1889px",
+        sx: "394px",
+        sxx: "378px",
+        "5xl": "1400px",
+        "6xl": "1250px",
+        "7xl": "2100px",
+        "1sm": "550px",
+        "2sm": "722px",
+        "3sm": "572px",
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
