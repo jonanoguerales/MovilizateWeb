@@ -16,7 +16,7 @@ export const FeatureCard = ({
   return (
     <div
       className={cn(
-        "group relative overflow-hidden rounded-2xl bg-white/10 p-8 backdrop-blur-sm transition-all duration-500 hover:bg-white/20",
+        "group relative cursor-default overflow-hidden rounded-2xl bg-white/10 p-8 backdrop-blur-sm transition-all duration-500 hover:bg-white/20",
         "border border-white/10 shadow-xl",
         className
       )}
