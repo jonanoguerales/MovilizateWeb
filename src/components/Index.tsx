@@ -21,7 +21,6 @@ const Index = () => {
               title="Entrenamiento online"
               description="Ponte en forma de manera online en grupos de hasta 5 personas"
               icon={<Dumbbell className="h-6 w-6" />}
-              className="bg-white/10 backdrop-blur-sm"
             />
             <FeatureCard
               title="Desde cualquier lugar"

@@ -27,7 +27,7 @@ const PlanesIndex = () => {
   return (
     <div className=" bg-gradient-to-b from-black to-gray-900" id="plan-index">
       {/* Pricing Section */}
-      <section className="px-6 py-12 sm:py-24 bg-black/50">
+      <section className="px-6 pt-24 pb-12 sm:py-24 bg-black/50">
         <div className="container mx-auto">
           <h2 className="text-5xl lg:text-6xl font-bold text-white text-center mb-12">
             Movilízate Online
@@ -47,7 +47,7 @@ const PlanesIndex = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="relative px-6 py-12 sm:py-24 bg-black/50">
+      <section className="relative px-6 pt-12 pb-24 sm:py-24 bg-black/50">
         <div className="container mx-auto">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">

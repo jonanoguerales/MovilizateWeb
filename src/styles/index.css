@@ -33,7 +33,20 @@
   body {
     @apply bg-background text-foreground antialiased;
   }
-
+  .style-icon {
+    --tw-backdrop-blur: blur(4px) !important;
+    -webkit-backdrop-filter: var(--tw-backdrop-blur)
+      var(--tw-backdrop-brightness) var(--tw-backdrop-contrast)
+      var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate)
+      var(--tw-backdrop-invert) var(--tw-backdrop-opacity)
+      var(--tw-backdrop-saturate) var(--tw-backdrop-sepia) !important;
+    backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness)
+      var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale)
+      var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert)
+      var(--tw-backdrop-opacity) var(--tw-backdrop-saturate)
+      var(--tw-backdrop-sepia) !important;
+    background-color: rgb(255 255 255 / 0.1) !important;
+  }
   /* Custom scrollbar */
   ::-webkit-scrollbar {
     width: 8px;
