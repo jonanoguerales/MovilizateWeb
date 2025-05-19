@@ -7,20 +7,20 @@ const PlanesIndex = () => {
   const plans = [
     {
       title: "Bono Diario",
-      pricePerSession: "35€/Sesión",
-      totalPrice: "35.00",
+      pricePerSession: "20€/Sesión",
+      totalPrice: "20.00",
       icon: img1.src,
     },
     {
       title: "Bono 4 Sesiones",
-      pricePerSession: "30€/Sesión",
-      totalPrice: "120.00",
+      pricePerSession: "15€/Sesión",
+      totalPrice: "60.00",
       icon: img2.src,
     },
     {
       title: "Bono 8 Sesiones",
-      pricePerSession: "20€/Sesión",
-      totalPrice: "160.00",
+      pricePerSession: "10€/Sesión",
+      totalPrice: "80.00",
       icon: img3.src,
     },
   ];
